@@ -86,7 +86,7 @@ export default function SmoothScrollProvider({ children }: SmoothScrollProviderP
       gsap.registerPlugin(ScrollTrigger);
       ScrollTrigger.defaults({ scroller: window });
     } catch {
-      console.debug('[NyayaSetu] GSAP ScrollTrigger not available');
+      console.debug('[SahkarSetu] GSAP ScrollTrigger not available');
     }
   }, []);
 

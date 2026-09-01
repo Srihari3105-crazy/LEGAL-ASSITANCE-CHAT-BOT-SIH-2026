@@ -1,10 +1,10 @@
 """
 API Error Handling
 
-Custom exceptions and error handlers for NyayaSetu API.
+Custom exceptions and error handlers for SahkarSetu API.
 Provides structured error responses with proper HTTP status codes.
 
-Author: NyayaSetu Team
+Author: SahkarSetu Team
 Version: 1.0.0
 """
 
@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 # CUSTOM EXCEPTIONS
 # ============================================================================
 
-class NyayaSetuAPIError(HTTPException):
+class SahkarSetuAPIError(HTTPException):
     """Base exception for API errors."""
     
     def __init__(
@@ -39,7 +39,7 @@ class NyayaSetuAPIError(HTTPException):
         super().__init__(status_code=status_code, detail=message)
 
 
-class SchemeNotFoundError(NyayaSetuAPIError):
+class SchemeNotFoundError(SahkarSetuAPIError):
     """Raised when scheme is not found in database."""
     
     def __init__(self, scheme_name: str):
@@ -51,7 +51,7 @@ class SchemeNotFoundError(NyayaSetuAPIError):
         )
 
 
-class InvalidInputError(NyayaSetuAPIError):
+class InvalidInputError(SahkarSetuAPIError):
     """Raised when input validation fails."""
     
     def __init__(self, field: str, reason: str):
@@ -63,7 +63,7 @@ class InvalidInputError(NyayaSetuAPIError):
         )
 
 
-class LLMUnavailableError(NyayaSetuAPIError):
+class LLMUnavailableError(SahkarSetuAPIError):
     """Raised when LLM service is unavailable."""
     
     def __init__(self, details: str = None):
@@ -75,7 +75,7 @@ class LLMUnavailableError(NyayaSetuAPIError):
         )
 
 
-class TranslationError(NyayaSetuAPIError):
+class TranslationError(SahkarSetuAPIError):
     """Raised when translation fails."""
     
     def __init__(self, details: str = None):
@@ -87,7 +87,7 @@ class TranslationError(NyayaSetuAPIError):
         )
 
 
-class RoutingError(NyayaSetuAPIError):
+class RoutingError(SahkarSetuAPIError):
     """Raised when grievance routing fails."""
     
     def __init__(self, details: str = None):
@@ -99,7 +99,7 @@ class RoutingError(NyayaSetuAPIError):
         )
 
 
-class ServiceUnavailableError(NyayaSetuAPIError):
+class ServiceUnavailableError(SahkarSetuAPIError):
     """Raised when a service is temporarily unavailable."""
     
     def __init__(self, service: str):
@@ -150,16 +150,16 @@ def build_error_response(
 # EXCEPTION HANDLERS
 # ============================================================================
 
-async def nyayasetu_error_handler(
+async def SahkarSetu_error_handler(
     request: Request,
-    exc: NyayaSetuAPIError
+    exc: SahkarSetuAPIError
 ) -> JSONResponse:
     """
-    Handle custom NyayaSetu API errors.
+    Handle custom SahkarSetu API errors.
     
     Args:
         request: FastAPI request
-        exc: NyayaSetuAPIError instance
+        exc: SahkarSetuAPIError instance
     
     Returns:
         JSONResponse with error details
@@ -269,7 +269,7 @@ async def general_exception_handler(
 # MODULE ERROR MAPPING
 # ============================================================================
 
-def map_module_error(exc: Exception, module_name: str) -> NyayaSetuAPIError:
+def map_module_error(exc: Exception, module_name: str) -> SahkarSetuAPIError:
     """
     Map module-specific errors to API errors.
     
@@ -278,7 +278,7 @@ def map_module_error(exc: Exception, module_name: str) -> NyayaSetuAPIError:
         module_name: Name of the module
     
     Returns:
-        NyayaSetuAPIError instance
+        SahkarSetuAPIError instance
     """
     error_name = type(exc).__name__
     
@@ -314,7 +314,7 @@ def map_module_error(exc: Exception, module_name: str) -> NyayaSetuAPIError:
         return InvalidInputError("unknown", error_msg)
     
     # Generic module error
-    return NyayaSetuAPIError(
+    return SahkarSetuAPIError(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         error=f"{module_name}Error",
         message=f"Error in {module_name} module",

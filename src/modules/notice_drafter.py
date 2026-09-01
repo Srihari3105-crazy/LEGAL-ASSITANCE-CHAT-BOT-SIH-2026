@@ -4,7 +4,7 @@ Notice Drafter Module
 Production-grade module for generating official government notices in gazette-style
 format for scheme announcements, updates, and circulars using RAG+LLM pipeline.
 
-Author: NyayaSetu Team
+Author: SahkarSetu Team
 Version: 1.0.0
 """
 

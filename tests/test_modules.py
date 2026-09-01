@@ -28,7 +28,7 @@ from src.modules.translator import (
 
 # Import the module under test
 import sys
-sys.path.insert(0, '/home/claude/nyayasetu/src')
+sys.path.insert(0, '/home/claude/SahkarSetu/src')
 
 from src.modules.summarizer import (
     SchemeSummarizer,

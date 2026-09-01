@@ -1,5 +1,5 @@
 """
-Language Registry — 12 Indian languages supported by NyayaVaani.
+Language Registry — 12 Indian languages supported by SahkarVaani.
 """
 
 from dataclasses import dataclass

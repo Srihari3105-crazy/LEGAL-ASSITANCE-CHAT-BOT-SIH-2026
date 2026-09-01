@@ -14,7 +14,7 @@ from typing import Optional
 
 import httpx
 
-from .config import NyayaVaaniConfig
+from .config import SahkarVaaniConfig
 from .language_registry import SUPPORTED_LANGUAGES
 
 logger = logging.getLogger(__name__)
@@ -46,7 +46,7 @@ class SynthesisResult:
 class TTSEngine:
     """Text-to-speech engine with online/offline dual mode."""
 
-    def __init__(self, config: NyayaVaaniConfig):
+    def __init__(self, config: SahkarVaaniConfig):
         self.config = config
 
     async def synthesize(

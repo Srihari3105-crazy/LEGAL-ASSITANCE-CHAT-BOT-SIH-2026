@@ -1,4 +1,4 @@
-# NyayaSetu Operational Runbook
+# SahkarSetu Operational Runbook
 
 This is the day-2 manual. When something breaks at 2 a.m., this is the file
 you grep through. For deployment from clean state see
@@ -31,7 +31,7 @@ You no longer have a working admin login but you have access to the
 `DATABASE_URL`.
 
 ```bash
-export BOOTSTRAP_ADMIN_EMAIL="admin@nyayasetu.example"
+export BOOTSTRAP_ADMIN_EMAIL="admin@SahkarSetu.example"
 export BOOTSTRAP_ADMIN_PASSWORD='ChangeMe-Now-9!'
 export DATABASE_URL='postgresql://...neon.tech/neondb?sslmode=require'
 bash scripts/bootstrap_admin.sh

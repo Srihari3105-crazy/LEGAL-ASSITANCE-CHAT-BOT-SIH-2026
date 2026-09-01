@@ -1,5 +1,6 @@
 """
 Intent Engine — Classify user voice intents and extract entities.
+Cooperative governance domain for SahkarSetu.
 Uses the shared LLM client (Groq cloud or Ollama local).
 """
 
@@ -9,7 +10,7 @@ import logging
 from dataclasses import dataclass, field
 from typing import Optional
 
-from .config import NyayaVaaniConfig
+from .config import SahkarVaaniConfig
 
 # Sanitize transcribed citizen text before it lands in an LLM prompt.
 try:
@@ -27,6 +28,10 @@ INTENT_TYPES = [
     "check_status",
     "browse_schemes",
     "ask_eligibility",
+    "ask_cooperative_law",
+    "check_pmfby",
+    "get_pacs_info",
+    "financial_query",
     "hear_notice",
     "general_query",
     "unclear",
@@ -54,7 +59,7 @@ class VoiceGrievanceData:
 class IntentEngine:
     """Voice intent classification and entity extraction."""
 
-    def __init__(self, config: NyayaVaaniConfig):
+    def __init__(self, config: SahkarVaaniConfig):
         self.config = config
 
     def _get_llm_client(self):
@@ -65,17 +70,21 @@ class IntentEngine:
         """Classify user intent from transcribed text."""
         # Strip jailbreak markers from transcribed audio before prompting.
         safe_text = sanitize_user_input(text, max_len=2000)
-        prompt = f"""You are an intent classifier for an Indian government services platform (NyayaSetu).
+        prompt = f"""You are an intent classifier for SahkarSetu — an Indian cooperative governance & legal assistance platform.
 The citizen is speaking in {language}. Classify their speech into one of these intents:
-- submit_grievance: citizen wants to file a complaint or report a problem
-- check_status: citizen wants to check grievance/application status
-- browse_schemes: citizen wants to know about government schemes
-- ask_eligibility: citizen asking about eligibility for a scheme
-- hear_notice: citizen wants to hear/read official notices
-- general_query: general question about government services
+- submit_grievance: member wants to file a complaint about cooperative issues
+- check_status: member wants to check grievance/application status
+- browse_schemes: member wants to know about cooperative schemes (PACS, Sahkar-se-Samriddhi, AIF, etc.)
+- ask_eligibility: member asking about eligibility for a scheme or service
+- ask_cooperative_law: member asking about cooperative laws, MSCS Act, by-laws, member rights
+- check_pmfby: member asking about crop insurance, PMFBY, premium, claim status
+- get_pacs_info: member asking about PACS services, membership, loan process
+- financial_query: member asking about loans, KCC, savings, credit, financial literacy
+- hear_notice: member wants to hear/read cooperative circulars or notices
+- general_query: general question about cooperative services
 - unclear: cannot determine intent
 
-Also extract entities like: scheme_name, grievance_id, department, location, category.
+Also extract entities like: scheme_name, grievance_id, department, location, category, crop_name, pacs_name.
 
 Citizen's text:
 "{safe_text}"
@@ -87,7 +96,7 @@ Return ONLY a JSON object:
             client = self._get_llm_client()
             result = client.generate(
                 prompt=prompt,
-                system_prompt="You are a multilingual intent classifier for Indian government services. You understand Hindi, Tamil, Bengali, Telugu, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia, Assamese, Urdu, and English. Return ONLY valid JSON.",
+                system_prompt="You are a multilingual intent classifier for Indian cooperative governance services (SahkarSetu). You understand Hindi, Tamil, Bengali, Telugu, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia, Assamese, Urdu, and English. You specialize in cooperative laws, PACS, PMFBY, and agricultural credit. Return ONLY valid JSON.",
                 temperature=0.1,
                 max_tokens=300,
             )
@@ -126,7 +135,7 @@ Return ONLY a JSON object:
 {{
   "title": "brief title in English (10 words max)",
   "description": "full complaint text (keep original language, clean up speech artifacts)",
-  "category": "one of: payment_delays, eligibility_questions, service_denial, document_issues, application_rejection, corruption, infrastructure, other",
+  "category": "one of: membership_denial, dividend_dispute, election_irregularity, loan_recovery_harassment, service_denial, insurance_claim_delay, payment_delay, corruption, by_law_violation, documentation, other",
   "location": "extracted location or null",
   "entities": {{"scheme_name": "if mentioned", "department": "if mentioned"}}
 }}"""
@@ -135,7 +144,7 @@ Return ONLY a JSON object:
             client = self._get_llm_client()
             result = client.generate(
                 prompt=prompt,
-                system_prompt="You are an Indian government grievance analyst. Extract structured data from citizen complaints in any Indian language. Return ONLY valid JSON.",
+                system_prompt="You are a cooperative governance grievance analyst for SahkarSetu. Extract structured data from cooperative member complaints in any Indian language. Return ONLY valid JSON.",
                 temperature=0.1,
                 max_tokens=400,
             )

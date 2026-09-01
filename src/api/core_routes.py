@@ -80,7 +80,7 @@ async def health_check():
 async def root():
     """Root endpoint."""
     return {
-        "name": "NyayaSetu API",
+        "name": "SahkarSetu API",
         "version": "1.0.0",
         "docs": "/docs",
         "health": "/health",
@@ -166,7 +166,7 @@ async def ask_question(
             )
         else:
             prompt = (
-                f"You are NyayaSetu, an expert on Indian government schemes like PM-KISAN, MGNREGA, PMAY-G.\n\n"
+                f"You are SahkarSetu, an expert on Indian government schemes like PM-KISAN, MGNREGA, PMAY-G.\n\n"
                 f"Question: {safe_question}\n\n"
                 f"Provide a helpful, detailed answer in {lang_instruction}."
             )

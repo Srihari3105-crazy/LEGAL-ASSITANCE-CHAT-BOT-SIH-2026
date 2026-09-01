@@ -199,7 +199,7 @@ const Settings: React.FC = () => {
     if (!confirm('Clear all cached data?')) return;
     // Preserve auth + identity. Only purge cache-related keys.
     const PROTECTED_KEYS = new Set(['token', 'user']);
-    const CACHE_KEY_PREFIXES = ['cache:', 'nyayasetu:cache:', 'rag:', 'schemes:cache'];
+    const CACHE_KEY_PREFIXES = ['cache:', 'SahkarSetu:cache:', 'rag:', 'schemes:cache'];
     const CACHE_KEY_EXACT = new Set([
       'notifications',
       'autoSync',
@@ -228,7 +228,7 @@ const Settings: React.FC = () => {
     const data = { settings: { notifications, autoSync, language }, timestamp: new Date().toISOString(), version: '2.0.0' };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a'); a.href = url; a.download = `nyayasetu-settings-${Date.now()}.json`; a.click();
+    const a = document.createElement('a'); a.href = url; a.download = `SahkarSetu-settings-${Date.now()}.json`; a.click();
     URL.revokeObjectURL(url);
   };
 

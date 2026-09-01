@@ -12,7 +12,7 @@ import NoticeDrafter from './pages/NoticeDrafter';
 import Settings from './pages/Settings';
 import DepartmentDashboard from './pages/DepartmentDashboard';
 import AdminDashboard from './pages/AdminDashboard';
-import NyayaVaani from './pages/NyayaVaani';
+import SahkarVaani from './pages/SahkarVaani';
 import ThemedSpinner from './components/ui/ThemedSpinner';
 
 // TODO: The following pages are being added by another agent. Until they exist
@@ -121,10 +121,10 @@ const AnimatedRoutes: React.FC<{ isOnline: boolean }> = ({ isOnline }) => {
             }
           />
           <Route
-            path="/nyayavaani"
+            path="/SahkarVaani"
             element={
               <ProtectedRoute allowedRoles={['citizen', 'officer', 'admin']}>
-                <NyayaVaani />
+                <SahkarVaani />
               </ProtectedRoute>
             }
           />

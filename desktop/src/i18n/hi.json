@@ -55,7 +55,7 @@
     "askQuestion": "प्रश्न पूछें",
     "grievances": "शिकायतें",
     "noticeBoard": "सूचना पट्ट",
-    "nyayavaani": "न्यायवाणी",
+    "SahkarVaani": "न्यायवाणी",
     "settings": "सेटिंग्स",
     "governancePlatform": "शासन मंच"
   },
@@ -309,7 +309,7 @@
     "rejectedByAdmin": "प्रशासक द्वारा अस्वीकृत",
     "copyToClipboard": "क्लिपबोर्ड पर कॉपी करें"
   },
-  "nyayavaani": {
+  "SahkarVaani": {
     "title": "न्यायवाणी",
     "subtitle": "ध्वनि-आधारित बहुभाषी शासन",
     "voiceGrievance": "ध्वनि शिकायत",

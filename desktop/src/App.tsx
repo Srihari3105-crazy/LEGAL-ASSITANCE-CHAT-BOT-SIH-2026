@@ -57,7 +57,7 @@ function SplashScreen() {
           />
           {/* Logo — stylized N in a circle */}
           <div className="w-16 h-16 rounded-full border border-[#0D92F4]/20 flex items-center justify-center relative">
-            <span className="text-2xl font-display font-bold text-gradient-gold">N</span>
+            <span className="text-2xl font-display font-bold text-gradient-gold">S</span>
             {/* Spinning ring */}
             <motion.div
               className="absolute inset-[-3px] rounded-full border border-transparent"
@@ -78,7 +78,7 @@ function SplashScreen() {
           transition={{ delay: 0.3, duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
           className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-2"
         >
-          <span className="text-gradient-gold">Nyaya</span>
+          <span className="text-gradient-gold">Sahkar</span>
           <span className="text-kora-100">Setu</span>
         </motion.h1>
 
@@ -89,7 +89,7 @@ function SplashScreen() {
           transition={{ delay: 0.5, duration: 0.4 }}
           className="font-devanagari text-base text-mitti-500/50 mb-8"
         >
-          न्यायसेतु
+          सहकारसेतु
         </motion.p>
 
         {/* Progress line */}

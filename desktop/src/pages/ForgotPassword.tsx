@@ -62,7 +62,7 @@ const ForgotPassword: React.FC = () => {
             <div className="inline-block mb-3">
               <AshokaChakra size={44} />
             </div>
-            <h1 className="text-2xl font-display font-bold text-gradient-gold">NyayaSetu</h1>
+            <h1 className="text-2xl font-display font-bold text-gradient-gold">SahkarSetu</h1>
             <p className="font-devanagari text-sm text-slate-400/50 mt-1">न्यायसेतु</p>
           </div>
 

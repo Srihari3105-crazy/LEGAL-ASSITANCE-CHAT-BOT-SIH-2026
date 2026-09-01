@@ -30,12 +30,12 @@ logger = logging.getLogger(__name__)
 # CONFIGURATION
 # ============================================================================
 
-_DEFAULT_SECRET = "nyayasetu-dev-secret-key-CHANGE-IN-PRODUCTION"
+_DEFAULT_SECRET = "SahkarSetu-dev-secret-key-CHANGE-IN-PRODUCTION"
 
-# Accept canonical JWT_SECRET_KEY first, fall back to legacy NYAYASETU_SECRET_KEY.
+# Accept canonical JWT_SECRET_KEY first, fall back to legacy SahkarSetu_SECRET_KEY.
 SECRET_KEY = (
     os.environ.get("JWT_SECRET_KEY")
-    or os.environ.get("NYAYASETU_SECRET_KEY")
+    or os.environ.get("SahkarSetu_SECRET_KEY")
     or _DEFAULT_SECRET
 )
 

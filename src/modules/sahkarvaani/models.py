@@ -1,5 +1,5 @@
 """
-NyayaVaani Pydantic models for request/response validation.
+SahkarVaani Pydantic models for request/response validation.
 """
 
 from pydantic import BaseModel, Field
@@ -82,7 +82,7 @@ class VoiceGrievanceResponse(BaseModel):
     acknowledgement_audio_url: Optional[str] = None
 
 
-class NyayaVaaniStatusResponse(BaseModel):
+class SahkarVaaniStatusResponse(BaseModel):
     status: str
     mode: str  # "online" or "offline"
     sarvam_api: bool
@@ -92,7 +92,7 @@ class NyayaVaaniStatusResponse(BaseModel):
     audio_cleanup_enabled: bool
 
 
-class NyayaVaaniErrorResponse(BaseModel):
+class SahkarVaaniErrorResponse(BaseModel):
     error: str
     message: str
     message_hindi: Optional[str] = None

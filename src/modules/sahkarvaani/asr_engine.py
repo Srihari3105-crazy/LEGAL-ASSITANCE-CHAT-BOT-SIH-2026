@@ -10,7 +10,7 @@ from typing import Optional
 
 import httpx
 
-from .config import NyayaVaaniConfig
+from .config import SahkarVaaniConfig
 from .language_registry import SUPPORTED_LANGUAGES
 from .audio_utils import convert_to_wav, validate_audio_file
 
@@ -46,7 +46,7 @@ class TranscriptionResult:
 class ASREngine:
     """Speech-to-text engine with online/offline dual mode."""
 
-    def __init__(self, config: NyayaVaaniConfig):
+    def __init__(self, config: SahkarVaaniConfig):
         self.config = config
         self._whisper_model = None
 

@@ -1,5 +1,5 @@
 """
-NyayaVaani Configuration.
+SahkarVaani Configuration — Voice engine for cooperative governance.
 """
 
 import os
@@ -11,14 +11,10 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
-class NyayaVaaniConfig:
-    """Configuration for NyayaVaani services."""
+class SahkarVaaniConfig:
+    """Configuration for SahkarVaani voice services."""
 
     # Sarvam AI
-    # SECURITY: Previously this field had a hard-coded API key literal in the
-    # source. That literal has been treated as BURNED — it MUST be rotated
-    # before any production deploy. The key now comes exclusively from the
-    # SARVAM_API_KEY environment variable. Never check secrets into VCS.
     sarvam_api_key: str = field(
         default_factory=lambda: os.environ.get("SARVAM_API_KEY", "")
     )
@@ -57,12 +53,10 @@ class NyayaVaaniConfig:
         self.audio_output_dir.mkdir(parents=True, exist_ok=True)
 
         mode = "ONLINE (Sarvam AI)" if self.is_online_mode else "OFFLINE (local models)"
-        logger.info(f"NyayaVaani mode: {mode}")
+        logger.info(f"SahkarVaani mode: {mode}")
         logger.info(f"Ollama cross-lingual model: {self.sarvam_m_model}")
         logger.info(f"Audio dirs: uploads={self.audio_upload_dir}, output={self.audio_output_dir}")
 
-        # Production guardrail: missing Sarvam key = no cloud STT/TTS/translate.
-        # In production this is a configuration error; warn loudly so ops sees it.
         env = os.environ.get("ENV", "development").lower()
         if not self.sarvam_api_key:
             if env == "production":
@@ -72,5 +66,9 @@ class NyayaVaaniConfig:
                 )
             else:
                 logger.warning(
-                    "SARVAM_API_KEY not set — running NyayaVaani in OFFLINE mode (dev only)."
+                    "SARVAM_API_KEY not set — running SahkarVaani in OFFLINE mode (dev only)."
                 )
+
+
+# Backward compatibility alias
+SahkarVaaniConfig = SahkarVaaniConfig

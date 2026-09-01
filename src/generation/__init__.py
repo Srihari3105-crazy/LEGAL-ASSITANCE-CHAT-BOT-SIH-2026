@@ -1,5 +1,5 @@
 """
-NyayaSetu-GovAgent Answer Generation Layer
+SahkarSetu-GovAgent Answer Generation Layer
 
 This package provides production-grade answer generation with:
 - Local LLM integration (Ollama)

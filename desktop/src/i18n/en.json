@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "NyayaSetu",
+    "appName": "SahkarSetu",
     "tagline": "Rural Governance Platform",
     "loading": "Loading...",
     "save": "Save",
@@ -55,7 +55,7 @@
     "askQuestion": "Ask Question",
     "grievances": "Grievances",
     "noticeBoard": "Notice Board",
-    "nyayavaani": "NyayaVaani",
+    "SahkarVaani": "SahkarVaani",
     "settings": "Settings",
     "governancePlatform": "Governance Platform"
   },
@@ -67,7 +67,7 @@
     "darkMode": "Dark Mode"
   },
   "login": {
-    "welcomeTitle": "Welcome to NyayaSetu",
+    "welcomeTitle": "Welcome to SahkarSetu",
     "subtitle": "Rural Governance Platform",
     "loginTab": "Login",
     "registerTab": "Register",
@@ -309,8 +309,8 @@
     "rejectedByAdmin": "Rejected by Admin",
     "copyToClipboard": "Copy to Clipboard"
   },
-  "nyayavaani": {
-    "title": "NyayaVaani",
+  "SahkarVaani": {
+    "title": "SahkarVaani",
     "subtitle": "Voice-native cross-lingual governance",
     "voiceGrievance": "Voice Grievance",
     "voiceGrievanceDesc": "Speak your grievance in any language",

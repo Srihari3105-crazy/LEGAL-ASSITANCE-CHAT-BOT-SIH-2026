@@ -1,4 +1,4 @@
-"""Centralized environment-driven settings for NyayaSetu.
+"""Centralized environment-driven settings for SahkarSetu.
 
 Using pydantic-settings to enforce required vars in production and
 provide typed access elsewhere via get_settings().
@@ -34,7 +34,8 @@ class Settings(BaseSettings):
 
     # Auth
     jwt_secret_key: Optional[str] = Field(default=None)
-    nyayasetu_secret_key: Optional[str] = Field(default=None)  # legacy fallback
+    SahkarSetu_secret_key: Optional[str] = Field(default=None)  # legacy fallback
+    sahkarsetu_secret_key: Optional[str] = Field(default=None)  # new key
     jwt_algorithm: str = Field(default="HS256")
     jwt_expiry_hours: int = Field(default=24)
 
@@ -73,7 +74,7 @@ class Settings(BaseSettings):
 
     @property
     def effective_jwt_secret(self) -> Optional[str]:
-        return self.jwt_secret_key or self.nyayasetu_secret_key
+        return self.jwt_secret_key or self.sahkarsetu_secret_key or self.SahkarSetu_secret_key
 
     @property
     def cors_origins_list(self) -> List[str]:

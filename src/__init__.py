@@ -1,3 +1,3 @@
 """
-NyayaSetu-GovAgent source package.
+SahkarSetu-GovAgent source package.
 """

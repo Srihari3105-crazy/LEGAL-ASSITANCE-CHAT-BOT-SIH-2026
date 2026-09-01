@@ -1,0 +1,39 @@
+{
+  "document_id": "COOP-PMFBY-GUIDE",
+  "title": "PMFBY - Pradhan Mantri Fasal Bima Yojana Complete Guide",
+  "department": "Ministry of Agriculture & Farmers Welfare",
+  "document_type": "scheme_benefits",
+  "language": "en",
+  "chunks": [
+    {
+      "chunk_id": "PMFBY-OVERVIEW",
+      "section": "Overview",
+      "content": "Pradhan Mantri Fasal Bima Yojana (PMFBY) is the flagship crop insurance scheme of Government of India launched on 18 February 2016. It replaced National Agricultural Insurance Scheme (NAIS) and Modified NAIS. Objective: To provide financial support to farmers suffering crop loss/damage due to unforeseen events. Coverage: All food crops, oilseeds, annual commercial/horticultural crops. Implementation: Through empanelled insurance companies. Portal: pmfby.gov.in. App: Crop Insurance App (available on Android/iOS).",
+      "category": "scheme_benefits"
+    },
+    {
+      "chunk_id": "PMFBY-ELIGIBILITY",
+      "section": "Eligibility",
+      "content": "Who is eligible for PMFBY: (1) All farmers including sharecroppers and tenant farmers growing notified crops, (2) Both loanee farmers (who have taken crop loan from banks) and non-loanee farmers, (3) Enrollment is voluntary for all farmers from Kharif 2020 onwards, (4) Farmer must be in the notified area and growing notified crop during the season. Documents required: Aadhaar card, bank account/passbook, land records (7/12 extract or Khasra/Khatauni), sowing certificate from Patwari/Lekhpal, crop details declaration.",
+      "category": "eligibility"
+    },
+    {
+      "chunk_id": "PMFBY-PREMIUM",
+      "section": "Premium Rates",
+      "content": "PMFBY premium rates are among the lowest in the world: (1) Kharif (monsoon) crops: 2% of sum insured, (2) Rabi (winter) crops: 1.5% of sum insured, (3) Commercial and horticultural crops: 5% of sum insured. The difference between actual premium and farmer's share is paid by Central and State Government (50:50 sharing). Example: If sum insured is ₹50,000 for a Kharif crop, farmer pays only ₹1,000 (2%). The actual premium might be ₹5,000-8,000 — government pays the rest.",
+      "category": "financial_product"
+    },
+    {
+      "chunk_id": "PMFBY-CLAIM-PROCESS",
+      "section": "How to File a Claim",
+      "content": "PMFBY claim filing process: (1) Report crop loss within 72 hours of the calamity, (2) Report through: Crop Insurance App, toll-free number 14447, bank branch, insurance company office, CSC, or PACS, (3) Information needed: farmer's name, policy number, crop name, date and nature of loss, extent of damage, (4) Insurance company sends surveyor within 48 hours, (5) Crop Cutting Experiments (CCE) conducted for area-wide claims, (6) Individual claims settled based on field-level assessment, (7) Claim amount credited to farmer's bank account within 2 months of harvest data submission, (8) Grievance: contact insurance company → State Agriculture Department → PMFBY Grievance Portal.",
+      "category": "grievance_process"
+    },
+    {
+      "chunk_id": "PMFBY-RISKS-COVERED",
+      "section": "Risks Covered",
+      "content": "PMFBY covers the following risks: (1) Prevented Sowing/Planting: if farmer unable to sow due to deficit rainfall or adverse conditions, 25% of sum insured paid, (2) Standing Crop: comprehensive risk coverage from sowing to harvesting against drought, flood, inundation, pest/disease, natural fire, storm, hailstorm, cyclone, typhoon, landslide, (3) Post-Harvest Losses: coverage up to 14 days after harvest for cyclone, unseasonal rainfall, hailstorm only for cut-and-spread crops, (4) Localized Calamities: hailstorm, landslide, inundation affecting individual farms, (5) Mid-season adversity: add-on coverage for prevented planting. NOT COVERED: war, nuclear risks, riot, theft, domestic/wild animals damaging crop.",
+      "category": "scheme_benefits"
+    }
+  ]
+}

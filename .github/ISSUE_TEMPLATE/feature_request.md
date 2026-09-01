@@ -13,7 +13,7 @@ assignees: ''
 
 ## Proposed solution
 
-<!-- What should NyayaSetu do? Be concrete. UI sketch is welcome. -->
+<!-- What should SahkarSetu do? Be concrete. UI sketch is welcome. -->
 
 ## Alternatives considered
 

@@ -57,7 +57,7 @@ const Privacy: React.FC = () => {
           <div className="space-y-8">
             <Section title="Data Fiduciary" titleHi="डेटा न्यासी">
               <p>
-                NyayaSetu (न्यायसेतु) is operated as a citizen-governance pilot. The data fiduciary
+                SahkarSetu (न्यायसेतु) is operated as a citizen-governance pilot. The data fiduciary
                 under the Digital Personal Data Protection Act, 2023 is the project owner identified
                 in the Contact section below. By using this service you provide your consent under
                 Section 6 of the DPDP Act for the purposes set out below.
@@ -69,7 +69,7 @@ const Privacy: React.FC = () => {
                 <li>Account: name, username, email, phone number, role.</li>
                 <li>Location: city / district as provided during registration.</li>
                 <li>Grievance content: title, description, attached documents and images.</li>
-                <li>Voice recordings: only when you explicitly use the NyayaVaani voice features. Audio is processed for transcription, then discarded unless you submit it as part of a grievance.</li>
+                <li>Voice recordings: only when you explicitly use the SahkarVaani voice features. Audio is processed for transcription, then discarded unless you submit it as part of a grievance.</li>
                 <li>Usage logs: timestamps, IP address, device type — used for security and audit only.</li>
                 <li>Authentication tokens: stored in your browser's local storage to keep you signed in.</li>
               </ul>
@@ -132,7 +132,7 @@ const Privacy: React.FC = () => {
             <Section title="Contact" titleHi="संपर्क">
               <p>
                 For privacy questions, requests under your DPDP Act rights, or to file a data-protection
-                grievance, write to <a className="text-[#77CDFF] hover:underline" href="mailto:privacy@nyayasetu.in">privacy@nyayasetu.in</a>.
+                grievance, write to <a className="text-[#77CDFF] hover:underline" href="mailto:privacy@SahkarSetu.in">privacy@SahkarSetu.in</a>.
                 We aim to respond within 30 days.
               </p>
             </Section>
@@ -149,7 +149,7 @@ const Privacy: React.FC = () => {
             <Link to="/terms" className="hover:text-[#77CDFF] transition-colors">Terms of Service</Link>
             <Link to="/login" className="hover:text-[#77CDFF] transition-colors">Login</Link>
             <Link to="/public/schemes" className="hover:text-[#77CDFF] transition-colors">Browse Schemes</Link>
-            <span className="ml-auto">NyayaSetu &middot; पायलट परिनियोजन</span>
+            <span className="ml-auto">SahkarSetu &middot; पायलट परिनियोजन</span>
           </footer>
         </motion.div>
       </div>

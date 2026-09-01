@@ -1,5 +1,5 @@
 """
-Document Processor for NyayaSetu
+Document Processor for SahkarSetu
 Extracts text from PDF, DOCX, and TXT files
 """
 

@@ -1,0 +1,39 @@
+{
+  "document_id": "COOP-FINANCIAL-LITERACY",
+  "title": "Cooperative Financial Literacy Guide for Rural Members",
+  "department": "NCCT / NABARD",
+  "document_type": "financial_product",
+  "language": "en",
+  "chunks": [
+    {
+      "chunk_id": "FIN-LIT-COOP-BANKING",
+      "section": "Cooperative Banking vs Commercial Banking",
+      "content": "Cooperative banks are owned by their members and operate on the principle of 'one member, one vote'. Key differences from commercial banks: (1) Ownership: Cooperative banks owned by members, commercial banks by shareholders, (2) Purpose: Cooperatives serve members' welfare, commercial banks aim for profit, (3) Interest rates: Cooperative banks often offer lower lending rates for agriculture, (4) Reach: PACS serve at village level where commercial banks may not operate, (5) Governance: Elected board from members vs professional board in commercial banks, (6) Types: Urban Cooperative Banks (UCBs), State Cooperative Banks, DCCBs, PACS. Cooperative banks are regulated by RBI and supervised by NABARD.",
+      "category": "financial_product"
+    },
+    {
+      "chunk_id": "FIN-LIT-KCC",
+      "section": "Kisan Credit Card (KCC)",
+      "content": "Kisan Credit Card is a credit instrument for farmers to meet crop production and other agricultural needs. Features: (1) Single card for crop loans, term loans, and personal needs, (2) Credit limit based on land holding and crop pattern, (3) Interest rate: 7% p.a. (4% effective with 3% subvention for timely repayment), (4) Repayment: flexible, linked to crop cycle, (5) Insurance: Built-in personal accident insurance up to ₹50,000, (6) Available through PACS, cooperative banks, and commercial banks, (7) PM-KISAN beneficiaries can get KCC with simplified documentation. KCC was extended to animal husbandry and fisheries in 2018.",
+      "category": "financial_product"
+    },
+    {
+      "chunk_id": "FIN-LIT-SAVINGS",
+      "section": "Savings and Investment Options for Cooperative Members",
+      "content": "Savings options available to cooperative members: (1) Fixed Deposits in cooperative banks (often higher rates than commercial banks), (2) Recurring Deposits for regular savings habit, (3) Post Office Savings (available at PACS acting as postal agents), (4) Pradhan Mantri Jan Dhan Yojana account (zero balance), (5) Sukanya Samriddhi Yojana (for girl child), (6) Atal Pension Yojana (pension for unorganized sector), (7) PM Jeevan Jyoti Bima Yojana (life insurance ₹330/year), (8) PM Suraksha Bima Yojana (accident insurance ₹20/year), (9) National Savings Certificate (NSC), (10) Cooperative society share deposits (dividend from cooperative surplus). Always keep savings in a bank account linked to Aadhaar for DBT benefits.",
+      "category": "financial_product"
+    },
+    {
+      "chunk_id": "FIN-LIT-LOAN-MANAGEMENT",
+      "section": "Managing Loans and Avoiding Debt Trap",
+      "content": "Financial literacy tips for loan management: (1) Always borrow from formal institutions (banks, PACS) — never from moneylenders, (2) Understand interest rates: simple vs compound interest, (3) Read loan documents carefully before signing, (4) Maintain proper records of all loan transactions, (5) Repay on time to maintain credit history and get interest subvention, (6) If unable to repay, approach bank immediately for restructuring — don't default, (7) Use crop insurance (PMFBY) to protect against loan default due to crop failure, (8) Diversify income: don't depend only on one crop or source, (9) Join Self Help Groups (SHGs) for small credit needs, (10) Use KCC wisely — don't use crop loan for non-agricultural purposes. If facing loan recovery harassment, file complaint with Banking Ombudsman or through cooperative grievance cell.",
+      "category": "financial_product"
+    },
+    {
+      "chunk_id": "FIN-LIT-SHG",
+      "section": "Self Help Groups (SHGs) and Cooperative Linkage",
+      "content": "Self Help Groups (SHGs) are voluntary associations of 10-20 people (usually women) who save regularly and lend to each other. SHG-Bank Linkage Programme: (1) Form SHG with 10-20 members, (2) Open SHG savings account at bank/PACS, (3) Save regularly for 6 months, (4) Apply for credit linkage through NABARD, (5) Bank provides loans to SHG at 10-12% per year, (6) SHG lends to members at slightly higher rate, (7) Interest earned stays in group fund. Benefits: builds credit history, develops savings habit, empowers women, provides emergency credit. PACS can support SHGs by providing banking correspondent services and credit linkage.",
+      "category": "financial_product"
+    }
+  ]
+}

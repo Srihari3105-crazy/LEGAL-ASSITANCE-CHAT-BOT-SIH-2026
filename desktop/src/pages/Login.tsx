@@ -234,7 +234,7 @@ const Login: React.FC = () => {
             <div className="inline-block mb-3">
               <AshokaChakra size={44} spinning />
             </div>
-            <h1 className="text-2xl font-display font-bold text-gradient-gold">NyayaSetu</h1>
+            <h1 className="text-2xl font-display font-bold text-gradient-gold">SahkarSetu</h1>
             <p className="font-devanagari text-base text-slate-400/50 mt-1">न्यायसेतु</p>
           </div>
 
@@ -244,7 +244,7 @@ const Login: React.FC = () => {
               {isLogin ? t('login.loginTab') : t('login.registerTab')}
             </h2>
             <p className="text-sm text-slate-400/60">
-              {isLogin ? 'Welcome back to NyayaSetu' : 'Create your account to get started'}
+              {isLogin ? 'Welcome back to SahkarSetu' : 'Create your account to get started'}
             </p>
           </div>
 
@@ -453,7 +453,7 @@ const Login: React.FC = () => {
           {/* Footer */}
           <div className="mt-8 text-center">
             <p className="text-[11px] text-slate-500/30">
-              NyayaSetu v2.0 · AI-Powered Governance
+              SahkarSetu v2.0 · AI-Powered Governance
             </p>
           </div>
         </motion.div>

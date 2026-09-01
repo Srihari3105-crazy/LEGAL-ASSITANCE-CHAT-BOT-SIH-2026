@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 if (!import.meta.env.VITE_API_URL && import.meta.env.PROD === true) {
   // eslint-disable-next-line no-console
   console.error(
-    '[NyayaSetu] VITE_API_URL is not defined in a production build. ' +
+    '[SahkarSetu] VITE_API_URL is not defined in a production build. ' +
       'Falling back to http://localhost:8001 — this will NOT work for end users. ' +
       'Set VITE_API_URL in your Vercel environment variables.'
   );
@@ -343,35 +343,35 @@ export const apiService = {
   updateSlaConfig: async (department: string, config: Record<string, number>) =>
     (await api.post('/api/v1/grievances/admin/sla/config', null, { params: { department, ...config } })).data,
 
-  // ---- NyayaVaani ----
-  nyayavaaniStatus: async () => (await api.get('/api/v1/nyayavaani/status')).data,
+  // ---- SahkarVaani ----
+  SahkarVaaniStatus: async () => (await api.get('/api/v1/SahkarVaani/status')).data,
 
-  getNyayaVaaniSchemes: async () => (await api.get('/api/v1/nyayavaani/schemes')).data,
+  getSahkarVaaniSchemes: async () => (await api.get('/api/v1/SahkarVaani/schemes')).data,
 
   transcribeAudio: async (formData: FormData) =>
-    (await api.post('/api/v1/nyayavaani/transcribe', formData, {
+    (await api.post('/api/v1/SahkarVaani/transcribe', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
       timeout: 60000,
     })).data,
 
   synthesizeSpeech: async (data: { text: string; language: string; voice_gender?: string }) =>
-    (await api.post('/api/v1/nyayavaani/synthesize', data)).data,
+    (await api.post('/api/v1/SahkarVaani/synthesize', data)).data,
 
   classifyIntent: async (data: { text: string; language?: string }) =>
-    (await api.post('/api/v1/nyayavaani/classify-intent', data)).data,
+    (await api.post('/api/v1/SahkarVaani/classify-intent', data)).data,
 
   voiceGrievance: async (data: {
     transcription: string; language: string;
     citizen_name?: string; citizen_phone?: string; citizen_location?: string;
-  }) => (await api.post('/api/v1/nyayavaani/voice-grievance', data)).data,
+  }) => (await api.post('/api/v1/SahkarVaani/voice-grievance', data)).data,
 
   getNoticeAudio: (noticeId: string, language: string = 'hi') =>
-    `${API_BASE_URL}/api/v1/nyayavaani/notice/${noticeId}/audio?language=${language}`,
+    `${API_BASE_URL}/api/v1/SahkarVaani/notice/${noticeId}/audio?language=${language}`,
 
   getSchemeAudio: (schemeId: string, language: string = 'hi') =>
-    `${API_BASE_URL}/api/v1/nyayavaani/scheme/${schemeId}/audio?language=${language}`,
+    `${API_BASE_URL}/api/v1/SahkarVaani/scheme/${schemeId}/audio?language=${language}`,
 
-  nyayavaaniLanguages: async () => (await api.get('/api/v1/nyayavaani/languages')).data,
+  SahkarVaaniLanguages: async () => (await api.get('/api/v1/SahkarVaani/languages')).data,
 };
 
 export default apiService;

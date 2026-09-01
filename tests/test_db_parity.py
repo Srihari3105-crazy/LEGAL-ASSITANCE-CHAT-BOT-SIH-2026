@@ -7,7 +7,7 @@ Usage:
     python -m tests.test_db_parity
 
     # Test Postgres (requires docker-compose up postgres)
-    DATABASE_URL="postgresql://nyaya:nyaya@localhost:5432/nyayasetu" python -m tests.test_db_parity
+    DATABASE_URL="postgresql://nyaya:nyaya@localhost:5432/SahkarSetu" python -m tests.test_db_parity
 
 Exit code 0 = all passed, non-zero = at least one failure.
 """
@@ -244,7 +244,7 @@ def test_schema_tables_exist():
 
 def main():
     mode = "PostgreSQL" if db_adapter.IS_POSTGRES else "SQLite"
-    print(f"\n{BOLD}NyayaSetu Database Parity Test{RESET}")
+    print(f"\n{BOLD}SahkarSetu Database Parity Test{RESET}")
     print(f"Backend: {BOLD}{mode}{RESET}")
     if db_adapter.IS_POSTGRES:
         # Mask password for display

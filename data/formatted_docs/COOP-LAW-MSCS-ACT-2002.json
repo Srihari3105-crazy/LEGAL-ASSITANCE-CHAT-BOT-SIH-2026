@@ -1,0 +1,51 @@
+{
+  "document_id": "COOP-LAW-MSCS-2002",
+  "title": "Multi-State Co-operative Societies Act, 2002",
+  "department": "Ministry of Cooperation",
+  "document_type": "legal_provision",
+  "language": "en",
+  "chunks": [
+    {
+      "chunk_id": "MSCS-2002-CH1-OVERVIEW",
+      "section": "Chapter I - Overview",
+      "content": "The Multi-State Co-operative Societies Act, 2002 provides for the incorporation, regulation, and winding up of co-operative societies with objects not confined to one State. It facilitates the voluntary formation and democratic functioning of multi-state cooperatives. The Act is administered by the Central Registrar of Co-operative Societies. Any cooperative operating in more than one state must register under this Act. The Act replaced the Multi-State Cooperative Societies Act of 1984.",
+      "category": "legal_provision"
+    },
+    {
+      "chunk_id": "MSCS-2002-REGISTRATION",
+      "section": "Chapter II - Registration",
+      "content": "Registration of a multi-state cooperative requires: (1) Minimum 50 members from each state involved, (2) At least two states must be represented, (3) Application to Central Registrar with proposed bye-laws, (4) Members' list with addresses, (5) Proof that cooperative objectives span multiple states. The Central Registrar shall register within 4 months if all conditions are met. Registration certificate is conclusive evidence of legal existence.",
+      "category": "eligibility"
+    },
+    {
+      "chunk_id": "MSCS-2002-MEMBERSHIP",
+      "section": "Chapter III - Members",
+      "content": "Membership in a multi-state cooperative is open to: (1) Any individual who is competent to contract, (2) Any cooperative society, (3) The Central or State Government. Members have the right to: attend and vote at general meetings, be elected to the board, inspect books of account, receive share of surplus/dividend, and receive copy of bye-laws. No member shall hold more than 1/5th of total share capital. Expulsion of a member requires 2/3rd majority of members present at a general meeting.",
+      "category": "legal_provision"
+    },
+    {
+      "chunk_id": "MSCS-2002-GOVERNANCE",
+      "section": "Chapter IV - Management & Governance",
+      "content": "Every multi-state cooperative shall be managed by a Board of Directors elected by members. Board term is maximum 5 years. Board must include: at least 2 women directors, representation of SC/ST members in proportion to membership. Board meetings: minimum 4 per year. AGM: must be held within 6 months of financial year end. Quorum for AGM: 1/5th of total members or 25, whichever is less. CEO is appointed by the Board and is responsible for day-to-day management.",
+      "category": "by_law_clause"
+    },
+    {
+      "chunk_id": "MSCS-2002-AUDIT",
+      "section": "Chapter V - Audit & Accounts",
+      "content": "Every multi-state cooperative must: (1) Maintain proper books of accounts, (2) Get annual audit done by a qualified Chartered Accountant, (3) Maintain separate books for each state of operation, (4) File annual returns with Central Registrar within 6 months of financial year end. Audit report must be placed before AGM. Central Registrar can order special audit if irregularities are suspected. Members have right to inspect audit reports.",
+      "category": "legal_provision"
+    },
+    {
+      "chunk_id": "MSCS-2002-DISPUTES",
+      "section": "Chapter VI - Disputes & Settlement",
+      "content": "Disputes in multi-state cooperatives are referred to the Central Registrar for resolution. Types of disputes: (1) Between members and the society, (2) Between members, (3) Between the society and its officers, (4) Between societies. The Registrar may appoint an arbitrator or refer to arbitration tribunal. Appeal against arbitration award lies with the Central Government. The dispute resolution process must be completed within 3 months.",
+      "category": "grievance_process"
+    },
+    {
+      "chunk_id": "MSCS-2002-AMENDMENT-2023",
+      "section": "MSCS Amendment Act, 2023",
+      "content": "Key amendments in 2023: (1) Mandatory appointment of Cooperative Election Authority for free and fair elections, (2) Introduction of Cooperative Ombudsman for grievance redressal, (3) Strengthening audit and governance standards, (4) Provisions for electoral reforms including reservation for SC/ST/OBC/women, (5) Enhanced penalty for mismanagement and fraud, (6) Digital governance provisions including e-voting and digital record keeping, (7) Provisions for merger and amalgamation of cooperatives.",
+      "category": "legal_provision"
+    }
+  ]
+}

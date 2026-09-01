@@ -2,7 +2,7 @@
 Centralized Database Manager
 
 Provides connection management, context managers, and migration support
-for the NyayaSetu governance database.
+for the SahkarSetu governance database.
 
 Backend selection is automatic based on DATABASE_URL:
   - Unset/empty or sqlite://... -> SQLite (local dev)

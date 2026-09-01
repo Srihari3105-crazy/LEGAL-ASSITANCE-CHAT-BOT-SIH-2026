@@ -8,7 +8,7 @@ import ThemedSpinner from '../components/ui/ThemedSpinner';
 import FileAttachment from '../components/ui/FileAttachment';
 import toast from 'react-hot-toast';
 import apiService from '../services/api';
-import VoiceInputButton from '../components/nyayavaani/VoiceInputButton';
+import VoiceInputButton from '../components/SahkarVaani/VoiceInputButton';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -583,7 +583,7 @@ const SubmitTab: React.FC = () => {
               body.printing-receipt .gr-r-footer { margin-top: 24pt; font-size: 9pt; color: #666; border-top: 1px solid #ccc; padding-top: 12pt; }
             }
           `}</style>
-          <h1 className="gr-r-title">NyayaSetu — Grievance Receipt</h1>
+          <h1 className="gr-r-title">SahkarSetu — Grievance Receipt</h1>
           <p className="gr-r-sub">न्यायसेतु · Official acknowledgement of filing</p>
 
           <div className="gr-r-row">
@@ -636,7 +636,7 @@ const SubmitTab: React.FC = () => {
 
           <p className="gr-r-footer">
             Keep this receipt for your records. You can track this grievance any time using the ID above.
-            For questions, contact the assigned department or write to support@nyayasetu.in.
+            For questions, contact the assigned department or write to support@SahkarSetu.in.
           </p>
         </div>
       )}

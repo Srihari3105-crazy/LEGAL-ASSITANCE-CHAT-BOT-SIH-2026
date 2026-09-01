@@ -1,6 +1,6 @@
-# Contributing to NyayaSetu
+# Contributing to SahkarSetu
 
-Thanks for your interest in NyayaSetu. This project exists so that government
+Thanks for your interest in SahkarSetu. This project exists so that government
 services in India become accessible to people who currently can't reach them —
 because of language, literacy, or connectivity. Contributions that move the
 needle on that mission are very welcome.

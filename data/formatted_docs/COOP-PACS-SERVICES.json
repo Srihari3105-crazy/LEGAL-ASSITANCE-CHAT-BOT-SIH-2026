@@ -1,0 +1,39 @@
+{
+  "document_id": "COOP-PACS-SERVICES",
+  "title": "Primary Agricultural Credit Societies (PACS) Services Guide",
+  "department": "Ministry of Cooperation",
+  "document_type": "scheme_benefits",
+  "language": "en",
+  "chunks": [
+    {
+      "chunk_id": "PACS-OVERVIEW",
+      "section": "What is PACS",
+      "content": "Primary Agricultural Credit Societies (PACS) are the grassroots-level institutions in the short-term cooperative credit structure of India. There are approximately 1 lakh functional PACS in India serving over 13 crore farmer members. PACS operate at the village or panchayat level and provide agricultural credit, inputs, and other services to farmer members. The three-tier cooperative credit structure is: State Cooperative Bank (Apex) → District Central Cooperative Bank (DCCB) → PACS (Ground level). PACS are registered under the respective State Cooperative Societies Act.",
+      "category": "scheme_benefits"
+    },
+    {
+      "chunk_id": "PACS-SERVICES-LIST",
+      "section": "Multipurpose PACS Activities (25+)",
+      "content": "Under the Model Bye-Laws by Ministry of Cooperation, PACS can undertake 25+ activities: (1) Short-term crop loans and KCC, (2) Dairy operations and milk procurement, (3) Fishery cooperative activities, (4) Godown and warehouse construction, (5) LPG distributorship, (6) Petrol/diesel pump, (7) Fair Price Shop (PDS), (8) Common Service Centre (CSC), (9) Custom Hiring Centre for farm machinery, (10) Fertilizer and seed distribution, (11) Agri-input supply, (12) Post-harvest storage, (13) Organic farming promotion, (14) Agri-insurance enrollment (PMFBY), (15) Banking correspondent services, (16) PACS computerization, (17) Ration card services, (18) Soil testing, (19) Agricultural produce marketing, (20) Water management, (21) Solar energy, (22) E-commerce services, (23) Training and capacity building, (24) Financial literacy camps, (25) Cooperative education.",
+      "category": "scheme_benefits"
+    },
+    {
+      "chunk_id": "PACS-COMPUTERIZATION",
+      "section": "PACS Computerization Project",
+      "content": "The Ministry of Cooperation has launched a national project to computerize all functional PACS using a common ERP-based software. Key features: (1) Unified software platform for all PACS across India, (2) Integration with NABARD, State Cooperative Banks, and DCCBs, (3) Digital loan processing and disbursement, (4) Real-time transaction monitoring, (5) Member database with Aadhaar linkage, (6) Automated interest calculation and repayment tracking, (7) Digital ledger replacing manual registers, (8) Cloud-based data backup and security. Total project outlay: ₹2,516 crore. Target: 63,000 PACS by 2025-26.",
+      "category": "scheme_benefits"
+    },
+    {
+      "chunk_id": "PACS-MEMBERSHIP",
+      "section": "How to Join PACS",
+      "content": "To become a member of PACS: (1) Must be a resident of the area of operation of the PACS, (2) Must be engaged in agriculture or allied activities, (3) Apply to the Secretary/Manager of the local PACS, (4) Pay the membership/entrance fee (usually ₹10-100), (5) Purchase minimum share capital (usually ₹100-500), (6) Submit Aadhaar card, land records (if applicable), and passport photo. Membership approved by the Board of Directors. Benefits of membership: access to crop loans at subsidized rates, input supply, insurance enrollment, and participation in cooperative governance.",
+      "category": "eligibility"
+    },
+    {
+      "chunk_id": "PACS-LOAN-PROCESS",
+      "section": "How to Get a Crop Loan from PACS",
+      "content": "Crop loan process through PACS: (1) Be a member of PACS (or apply for membership), (2) Submit KCC application form to PACS Secretary, (3) Required documents: land records/passbook, Aadhaar, bank account details, crop plan, (4) PACS verifies land ownership and crop plan, (5) PACS Committee approves loan amount based on Scale of Finance (per hectare per crop), (6) Loan forwarded to DCCB for refinance, (7) Amount disbursed to member's bank account or through PACS, (8) Interest rate: 7% p.a. (with 3% subvention for timely repayment = effective 4% p.a.), (9) Repayment: after harvest/within 12 months, (10) KCC limit renewed annually based on repayment record.",
+      "category": "eligibility"
+    }
+  ]
+}

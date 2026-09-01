@@ -1,5 +1,5 @@
 """
-Production-grade LLM Client for NyayaSetu-GovAgent
+Production-grade LLM Client for SahkarSetu-GovAgent
 Supports Groq cloud API (primary) with Ollama local fallback.
 Same interface as before — all existing callers work unchanged.
 """

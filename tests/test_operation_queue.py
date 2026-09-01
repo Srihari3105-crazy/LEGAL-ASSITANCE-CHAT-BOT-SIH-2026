@@ -4,7 +4,7 @@ Operation Queue Tests
 Comprehensive test suite for the OperationQueue module.
 Tests queuing, processing, persistence, retry logic, and priority handling.
 
-Author: NyayaSetu Team
+Author: SahkarSetu Team
 Version: 1.0.0
 """
 

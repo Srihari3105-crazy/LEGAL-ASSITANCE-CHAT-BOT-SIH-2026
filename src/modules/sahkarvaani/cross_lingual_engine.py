@@ -9,7 +9,7 @@ from dataclasses import dataclass
 
 import httpx
 
-from .config import NyayaVaaniConfig
+from .config import SahkarVaaniConfig
 from .language_registry import SUPPORTED_LANGUAGES
 
 # Sanitize citizen-controlled text before LLM prompts.
@@ -35,7 +35,7 @@ class TranslationResult:
 class CrossLingualEngine:
     """Cross-lingual translation and cultural adaptation engine."""
 
-    def __init__(self, config: NyayaVaaniConfig):
+    def __init__(self, config: SahkarVaaniConfig):
         self.config = config
 
     async def translate_and_adapt(

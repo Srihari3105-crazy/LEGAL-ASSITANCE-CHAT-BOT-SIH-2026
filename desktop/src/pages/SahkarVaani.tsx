@@ -3,11 +3,11 @@ import { Volume2, Radio, ChevronDown, ChevronUp, BookOpen, Loader2 } from 'lucid
 import { useTranslation } from 'react-i18next';
 
 import PageTransition from '../components/ui/PageTransition';
-import AudioPlayer from '../components/nyayavaani/AudioPlayer';
-import LanguageSelector from '../components/nyayavaani/LanguageSelector';
+import AudioPlayer from '../components/SahkarVaani/AudioPlayer';
+import LanguageSelector from '../components/SahkarVaani/LanguageSelector';
 import apiService from '../services/api';
 
-interface NyayaVaaniStatus {
+interface SahkarVaaniStatus {
   status: string;
   mode: string;
   sarvam_api: boolean;
@@ -16,16 +16,16 @@ interface NyayaVaaniStatus {
   supported_languages: number;
 }
 
-interface NyayaVaaniScheme {
+interface SahkarVaaniScheme {
   scheme_id: string;
   scheme_name: string;
   department: string;
   short_description: string;
 }
 
-const NyayaVaani: React.FC = () => {
+const SahkarVaani: React.FC = () => {
   const { t } = useTranslation();
-  const [systemStatus, setSystemStatus] = useState<NyayaVaaniStatus | null>(null);
+  const [systemStatus, setSystemStatus] = useState<SahkarVaaniStatus | null>(null);
   const [showSystemInfo, setShowSystemInfo] = useState(false);
 
   // Notices state
@@ -33,7 +33,7 @@ const NyayaVaani: React.FC = () => {
   const [noticeLanguage, setNoticeLanguage] = useState('hi');
 
   // Schemes state
-  const [schemes, setSchemes] = useState<NyayaVaaniScheme[]>([]);
+  const [schemes, setSchemes] = useState<SahkarVaaniScheme[]>([]);
   const [schemeLanguage, setSchemeLanguage] = useState('hi');
   const [schemesLoading, setSchemesLoading] = useState(false);
 
@@ -45,10 +45,10 @@ const NyayaVaani: React.FC = () => {
 
   const loadStatus = async () => {
     try {
-      const data = await apiService.nyayavaaniStatus();
+      const data = await apiService.SahkarVaaniStatus();
       setSystemStatus(data);
     } catch (err) {
-      console.warn('Failed to load NyayaVaani status:', err);
+      console.warn('Failed to load SahkarVaani status:', err);
     }
   };
 
@@ -64,10 +64,10 @@ const NyayaVaani: React.FC = () => {
   const loadSchemes = async () => {
     setSchemesLoading(true);
     try {
-      const data = await apiService.getNyayaVaaniSchemes();
+      const data = await apiService.getSahkarVaaniSchemes();
       setSchemes(data.schemes || []);
     } catch (err) {
-      console.warn('Failed to load NyayaVaani schemes:', err);
+      console.warn('Failed to load SahkarVaani schemes:', err);
     } finally {
       setSchemesLoading(false);
     }
@@ -83,8 +83,8 @@ const NyayaVaani: React.FC = () => {
               <Radio className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold font-display text-kora-100 tracking-tight">{t('nyayavaani.title')}</h1>
-              <p className="text-sm text-mitti-500/40">{t('nyayavaani.subtitle')}</p>
+              <h1 className="text-2xl md:text-3xl font-bold font-display text-kora-100 tracking-tight">{t('SahkarVaani.title')}</h1>
+              <p className="text-sm text-mitti-500/40">{t('SahkarVaani.subtitle')}</p>
             </div>
             {systemStatus && (
               <span className={`ml-auto px-3 py-1 rounded-full text-xs font-medium ${
@@ -92,7 +92,7 @@ const NyayaVaani: React.FC = () => {
                   ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
                   : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400'
               }`}>
-                {systemStatus.mode === 'online' ? t('nyayavaani.online') : t('nyayavaani.offline')}
+                {systemStatus.mode === 'online' ? t('SahkarVaani.online') : t('SahkarVaani.offline')}
               </span>
             )}
           </div>
@@ -103,16 +103,16 @@ const NyayaVaani: React.FC = () => {
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Volume2 className="w-5 h-5 text-mitti-500" />
-              <h2 className="text-lg font-semibold text-kora-100">{t('nyayavaani.listenNotices')}</h2>
+              <h2 className="text-lg font-semibold text-kora-100">{t('SahkarVaani.listenNotices')}</h2>
             </div>
             <LanguageSelector selected={noticeLanguage} onSelect={setNoticeLanguage} mode="dropdown" className="w-48" />
           </div>
-          <p className="text-sm text-mitti-500 dark:text-mitti-400 mb-4">{t('nyayavaani.listenNoticesDesc')}</p>
+          <p className="text-sm text-mitti-500 dark:text-mitti-400 mb-4">{t('SahkarVaani.listenNoticesDesc')}</p>
 
           {notices.length === 0 ? (
             <div className="text-center py-8 text-mitti-400">
               <Volume2 size={40} className="mx-auto mb-2 opacity-30" />
-              <p>{t('nyayavaani.noNotices')}</p>
+              <p>{t('SahkarVaani.noNotices')}</p>
             </div>
           ) : (
             <div className="space-y-3">
@@ -129,8 +129,8 @@ const NyayaVaani: React.FC = () => {
                   </div>
                   <p className="text-xs text-mitti-600 dark:text-mitti-400 line-clamp-2 mb-3">{notice.body}</p>
                   <AudioPlayer
-                    src={`/api/v1/nyayavaani/notice/${notice.notice_id}/audio?language=${noticeLanguage}`}
-                    label={`${t('nyayavaani.playAudio')} - ${notice.subject}`}
+                    src={`/api/v1/SahkarVaani/notice/${notice.notice_id}/audio?language=${noticeLanguage}`}
+                    label={`${t('SahkarVaani.playAudio')} - ${notice.subject}`}
                     compact
                   />
                 </div>
@@ -145,13 +145,13 @@ const NyayaVaani: React.FC = () => {
             <div className="flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-mitti-500" />
               <h2 className="text-lg font-semibold text-kora-100">
-                {t('nyayavaani.listenSchemes', 'Listen to Government Schemes')}
+                {t('SahkarVaani.listenSchemes', 'Listen to Government Schemes')}
               </h2>
             </div>
             <LanguageSelector selected={schemeLanguage} onSelect={setSchemeLanguage} mode="dropdown" className="w-48" />
           </div>
           <p className="text-sm text-mitti-500 dark:text-mitti-400 mb-4">
-            {t('nyayavaani.listenSchemesDesc', 'Listen to detailed AI-generated summaries of government schemes in your language')}
+            {t('SahkarVaani.listenSchemesDesc', 'Listen to detailed AI-generated summaries of government schemes in your language')}
           </p>
 
           {schemesLoading ? (
@@ -162,7 +162,7 @@ const NyayaVaani: React.FC = () => {
           ) : schemes.length === 0 ? (
             <div className="text-center py-8 text-mitti-400">
               <BookOpen size={40} className="mx-auto mb-2 opacity-30" />
-              <p>{t('nyayavaani.noSchemes', 'No schemes available')}</p>
+              <p>{t('SahkarVaani.noSchemes', 'No schemes available')}</p>
             </div>
           ) : (
             <div className="space-y-3">
@@ -181,8 +181,8 @@ const NyayaVaani: React.FC = () => {
                     <p className="text-xs text-mitti-600 dark:text-mitti-400 line-clamp-2 mb-3">{scheme.short_description}</p>
                   )}
                   <AudioPlayer
-                    src={`/api/v1/nyayavaani/scheme/${scheme.scheme_id}/audio?language=${schemeLanguage}`}
-                    label={`${t('nyayavaani.playAudio', 'Play Audio')} - ${scheme.scheme_name}`}
+                    src={`/api/v1/SahkarVaani/scheme/${scheme.scheme_id}/audio?language=${schemeLanguage}`}
+                    label={`${t('SahkarVaani.playAudio', 'Play Audio')} - ${scheme.scheme_name}`}
                     compact
                   />
                 </div>
@@ -198,7 +198,7 @@ const NyayaVaani: React.FC = () => {
             className="flex items-center gap-2 text-sm text-mitti-500 hover:text-mitti-700 dark:hover:text-mitti-300 transition-colors"
           >
             {showSystemInfo ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-            {t('nyayavaani.systemStatus')}
+            {t('SahkarVaani.systemStatus')}
           </button>
           <div
             style={{
@@ -230,7 +230,7 @@ const NyayaVaani: React.FC = () => {
                     </span>
                   </div>
                   <div>
-                    <span className="text-mitti-500 text-xs block">{t('nyayavaani.languages')}</span>
+                    <span className="text-mitti-500 text-xs block">{t('SahkarVaani.languages')}</span>
                     <span className="font-medium">{systemStatus.supported_languages}</span>
                   </div>
                 </div>
@@ -254,4 +254,4 @@ const NyayaVaani: React.FC = () => {
   );
 };
 
-export default NyayaVaani;
+export default SahkarVaani;

@@ -4,7 +4,7 @@ Scheme Summarizer Module
 Production-grade module for generating deterministic, structured summaries 
 of government schemes using RAG+LLM pipeline.
 
-Author: NyayaSetu Team
+Author: SahkarSetu Team
 Version: 1.0.0
 """
 

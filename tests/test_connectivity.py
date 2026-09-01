@@ -4,7 +4,7 @@ Connectivity Manager Tests
 Comprehensive test suite for the ConnectivityManager module.
 Tests connectivity detection, monitoring, callbacks, and quality assessment.
 
-Author: NyayaSetu Team
+Author: SahkarSetu Team
 Version: 1.0.0
 """
 

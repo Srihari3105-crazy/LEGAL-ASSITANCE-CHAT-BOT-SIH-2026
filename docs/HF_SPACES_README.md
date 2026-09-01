@@ -1,5 +1,5 @@
 ---
-title: NyayaSetu
+title: SahkarSetu
 emoji: 🇮🇳
 colorFrom: indigo
 colorTo: green
@@ -9,10 +9,10 @@ pinned: false
 license: apache-2.0
 ---
 
-# NyayaSetu — Backend (Docker SDK)
+# SahkarSetu — Backend (Docker SDK)
 
 This Hugging Face Space hosts the **FastAPI backend** for
-[NyayaSetu](https://github.com/) (न्यायसेतु), an AI-powered citizen
+[SahkarSetu](https://github.com/) (न्यायसेतु), an AI-powered citizen
 governance platform for India. The frontend SPA is hosted separately on
 Vercel.
 

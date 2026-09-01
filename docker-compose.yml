@@ -1,5 +1,5 @@
 # =============================================================================
-# NyayaSetu Local Dev / Test Stack
+# SahkarSetu Local Dev / Test Stack
 #
 # *** LOCAL DEV ONLY ***
 # Production runs on Neon (Postgres) + Hugging Face Spaces (backend, Docker SDK)
@@ -10,8 +10,8 @@
 #   1. Start Postgres for local Neon-like testing:
 #        docker-compose up -d postgres
 #   2. Point your backend at it:
-#        export DATABASE_URL="postgresql://nyaya:nyaya@localhost:5433/nyayasetu"
-#      (or PowerShell: $env:DATABASE_URL = "postgresql://nyaya:nyaya@localhost:5433/nyayasetu")
+#        export DATABASE_URL="postgresql://nyaya:nyaya@localhost:5433/SahkarSetu"
+#      (or PowerShell: $env:DATABASE_URL = "postgresql://nyaya:nyaya@localhost:5433/SahkarSetu")
 #   3. Run the backend normally:
 #        python -m uvicorn src.api.app:app --host 0.0.0.0 --port 8001 --reload
 #   4. To run the dockerized backend (HF Spaces parity test):
@@ -30,17 +30,17 @@ services:
     environment:
       POSTGRES_USER: nyaya
       POSTGRES_PASSWORD: nyaya
-      POSTGRES_DB: nyayasetu
+      POSTGRES_DB: SahkarSetu
       # Align encoding with Neon defaults
       LANG: en_US.utf8
     ports:
       # Mapped to 5433 on host to avoid conflicts with other local Postgres instances.
-      # Connection string: postgresql://nyaya:nyaya@localhost:5433/nyayasetu
+      # Connection string: postgresql://nyaya:nyaya@localhost:5433/SahkarSetu
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U nyaya -d nyayasetu"]
+      test: ["CMD-SHELL", "pg_isready -U nyaya -d SahkarSetu"]
       interval: 5s
       timeout: 3s
       retries: 10
@@ -58,7 +58,7 @@ services:
         condition: service_healthy
     environment:
       ENV: production
-      DATABASE_URL: postgresql://nyaya:nyaya@postgres:5432/nyayasetu
+      DATABASE_URL: postgresql://nyaya:nyaya@postgres:5432/SahkarSetu
       GROQ_API_KEY: ${GROQ_API_KEY}
       SARVAM_API_KEY: ${SARVAM_API_KEY}
       JWT_SECRET_KEY: ${JWT_SECRET_KEY:-local-dev-secret-change-me}

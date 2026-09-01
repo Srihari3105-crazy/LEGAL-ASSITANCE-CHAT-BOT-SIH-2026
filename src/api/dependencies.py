@@ -2,9 +2,9 @@
 API Dependencies
 
 Dependency injection setup and service initialization for FastAPI.
-Manages lifecycle of all NyayaSetu services.
+Manages lifecycle of all SahkarSetu services.
 
-Author: NyayaSetu Team
+Author: SahkarSetu Team
 Version: 1.0.0
 """
 
@@ -22,8 +22,8 @@ from src.generation.llm_client import OllamaClient, LLMConfig
 from src.modules.summarizer import SchemeSummarizer
 from src.modules.notice_drafter import NoticeDrafter
 from src.modules.grievance_router import GrievanceRouter
-from src.modules.nyayavaani.startup import NyayaVaaniService
-from src.modules.nyayavaani.config import NyayaVaaniConfig
+from src.modules.SahkarVaani.startup import SahkarVaaniService
+from src.modules.SahkarVaani.config import SahkarVaaniConfig
 
 from .settings import get_settings  # exposed for other modules
 
@@ -46,7 +46,7 @@ class AppState:
         self.summarizer: Optional[SchemeSummarizer] = None
         self.notice_drafter: Optional[NoticeDrafter] = None
         self.grievance_router: Optional[GrievanceRouter] = None
-        self.nyayavaani: Optional[NyayaVaaniService] = None
+        self.SahkarVaani: Optional[SahkarVaaniService] = None
         self.initialized = False
 
 
@@ -60,7 +60,7 @@ _app_state = AppState()
 
 async def initialize_services():
     """
-    Initialize all NyayaSetu services.
+    Initialize all SahkarSetu services.
     Called on application startup.
     
     Raises:
@@ -127,17 +127,17 @@ async def initialize_services():
         )
         logger.info("✓ Grievance Router initialized")
 
-        # 6. Initialize NyayaVaani
-        logger.info("6/6 Initializing NyayaVaani...")
+        # 6. Initialize SahkarVaani
+        logger.info("6/6 Initializing SahkarVaani...")
         try:
-            nyayavaani_config = NyayaVaaniConfig()
-            _app_state.nyayavaani = NyayaVaaniService(nyayavaani_config)
-            await _app_state.nyayavaani.initialize()
-            logger.info("✓ NyayaVaani initialized")
+            SahkarVaani_config = SahkarVaaniConfig()
+            _app_state.SahkarVaani = SahkarVaaniService(SahkarVaani_config)
+            await _app_state.SahkarVaani.initialize()
+            logger.info("✓ SahkarVaani initialized")
         except Exception as nve:
-            logger.warning(f"⚠ NyayaVaani partially unavailable: {nve}")
-            if _app_state.nyayavaani is None:
-                _app_state.nyayavaani = NyayaVaaniService(NyayaVaaniConfig())
+            logger.warning(f"⚠ SahkarVaani partially unavailable: {nve}")
+            if _app_state.SahkarVaani is None:
+                _app_state.SahkarVaani = SahkarVaaniService(SahkarVaaniConfig())
 
         _app_state.initialized = True
         logger.info("✓ All services initialized successfully!")
@@ -173,13 +173,13 @@ async def shutdown_services():
         except Exception as e:
             logger.error(f"Failed to clear router cache: {e}")
     
-    # Shutdown NyayaVaani
-    if _app_state.nyayavaani:
+    # Shutdown SahkarVaani
+    if _app_state.SahkarVaani:
         try:
-            await _app_state.nyayavaani.shutdown()
-            logger.info("✓ NyayaVaani shut down")
+            await _app_state.SahkarVaani.shutdown()
+            logger.info("✓ SahkarVaani shut down")
         except Exception as e:
-            logger.error(f"Failed to shutdown NyayaVaani: {e}")
+            logger.error(f"Failed to shutdown SahkarVaani: {e}")
 
     # Close database connections
     if _app_state.rag_engine and hasattr(_app_state.rag_engine, 'db_connection'):
@@ -272,11 +272,11 @@ def get_grievance_router() -> GrievanceRouter:
     return _app_state.grievance_router
 
 
-def get_nyayavaani_service() -> NyayaVaaniService:
-    """Get NyayaVaani service instance."""
-    if not _app_state.initialized or not _app_state.nyayavaani:
-        raise RuntimeError("NyayaVaani not initialized.")
-    return _app_state.nyayavaani
+def get_SahkarVaani_service() -> SahkarVaaniService:
+    """Get SahkarVaani service instance."""
+    if not _app_state.initialized or not _app_state.SahkarVaani:
+        raise RuntimeError("SahkarVaani not initialized.")
+    return _app_state.SahkarVaani
 
 
 def get_app_state() -> AppState:

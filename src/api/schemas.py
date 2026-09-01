@@ -2,9 +2,9 @@
 API Schemas
 
 Pydantic models for request validation and response serialization.
-Comprehensive schemas for all NyayaSetu API endpoints.
+Comprehensive schemas for all SahkarSetu API endpoints.
 
-Author: NyayaSetu Team
+Author: SahkarSetu Team
 Version: 1.0.0
 """
 

@@ -35,7 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onClose }) => {
     { path: '/chat', icon: MessageSquare, labelKey: 'sidebar.askQuestion', roles: ['citizen', 'officer', 'admin'] },
     { path: '/grievances', icon: AlertCircle, labelKey: 'sidebar.grievances', roles: ['citizen', 'officer', 'admin'] },
     { path: '/notices', icon: ScrollText, labelKey: 'sidebar.noticeBoard', roles: ['citizen', 'officer', 'admin'] },
-    { path: '/nyayavaani', icon: Mic, labelKey: 'sidebar.nyayavaani', roles: ['citizen', 'officer', 'admin'] },
+    { path: '/SahkarVaani', icon: Mic, labelKey: 'sidebar.SahkarVaani', roles: ['citizen', 'officer', 'admin'] },
     { path: '/settings', icon: Settings, labelKey: 'sidebar.settings', roles: ['citizen', 'officer', 'admin'] },
   ];
 
@@ -54,14 +54,14 @@ const Sidebar: React.FC<SidebarProps> = ({ onClose }) => {
               whileHover={{ scale: 1.08, rotate: 2 }}
               transition={{ type: 'spring', stiffness: 400, damping: 15 }}
             >
-              <span className="text-white font-display font-bold text-sm">N</span>
+              <span className="text-white font-display font-bold text-sm">S</span>
             </motion.div>
             <div>
               <h1 className="text-base font-display font-bold text-kora-100 tracking-tight">
-                NyayaSetu
+                SahkarSetu
               </h1>
               <p className="text-[10px] text-slate-400/40 font-medium tracking-wider uppercase">
-                Governance
+                Cooperative AI
               </p>
             </div>
           </div>

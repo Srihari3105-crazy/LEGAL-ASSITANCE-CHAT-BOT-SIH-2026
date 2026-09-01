@@ -1,23 +1,86 @@
 [
   {
+    "scheme_name": "PACS Computerization",
+    "department": "Ministry of Cooperation",
+    "eligibility": "All functional Primary Agricultural Credit Societies (PACS) in India",
+    "benefits": "ERP-based software for PACS operations, digital ledger management, linkage with NABARD and cooperative banks, transparency in transactions",
+    "process": "PACS registered with State Cooperative Department are automatically included. Contact District Central Cooperative Bank (DCCB) for onboarding status."
+  },
+  {
+    "scheme_name": "PMFBY - Pradhan Mantri Fasal Bima Yojana",
+    "department": "Ministry of Agriculture & Farmers Welfare",
+    "eligibility": "All farmers including sharecroppers and tenant farmers growing notified crops in notified areas. Both loanee and non-loanee farmers are eligible.",
+    "benefits": "Crop insurance coverage against natural calamities, pests, diseases. Premium rates: Kharif 2%, Rabi 1.5%, Commercial/Horticultural 5%. Government pays remaining premium. Claims settled within 2 months of harvest.",
+    "process": "1. Visit nearest bank/CSC/insurance company. 2. Fill application with land records, Aadhaar, bank details. 3. Pay premium. 4. Get insurance policy. 5. Report crop loss within 72 hours to insurance company or through Crop Insurance App."
+  },
+  {
+    "scheme_name": "Multipurpose PACS Transformation",
+    "department": "Ministry of Cooperation",
+    "eligibility": "Existing PACS willing to diversify into multiple business activities as per Model Bye-Laws",
+    "benefits": "PACS can undertake 25+ activities: dairy, fishery, godown construction, LPG distributorship, CSC operations, fertilizer distribution, seed distribution, custom hiring centres, fair price shops, petrol pumps",
+    "process": "Adopt Model Bye-Laws issued by Ministry of Cooperation. Apply through State Cooperative Department. Get training from NCCT/RICM institutes."
+  },
+  {
+    "scheme_name": "National Cooperative Database",
+    "department": "Ministry of Cooperation",
+    "eligibility": "All cooperative societies registered under state or central cooperative acts",
+    "benefits": "Single digital repository of all cooperatives in India, enables data-driven policy making, streamlines regulatory compliance, provides digital identity to cooperatives",
+    "process": "Registration through State Registrar of Cooperative Societies. Data uploaded via dedicated portal at cooperatives.gov.in."
+  },
+  {
+    "scheme_name": "Sahkar-se-Samriddhi (Prosperity Through Cooperation)",
+    "department": "Ministry of Cooperation",
+    "eligibility": "All cooperative societies and their members across India",
+    "benefits": "Policy framework for cooperative development, convergence of government schemes with cooperative infrastructure, capacity building through NCCT, access to Agriculture Infrastructure Fund (AIF)",
+    "process": "Cooperatives can access benefits through State Cooperative Departments. Training available through VAMNICOM, RICMs, and ICMs."
+  },
+  {
+    "scheme_name": "Agriculture Infrastructure Fund (AIF) for Cooperatives",
+    "department": "Ministry of Agriculture & Farmers Welfare",
+    "eligibility": "PACS, Marketing Cooperative Societies, FPOs, State Agency/APMCs, cooperative societies involved in agriculture",
+    "benefits": "1 lakh crore fund for post-harvest management infrastructure. Interest subvention of 3% per annum on loans up to ₹2 crore. Credit guarantee coverage under CGTMSE.",
+    "process": "Apply through banks with project proposal. PACS can apply for godowns, cold storage, processing units. Apply online at agriinfra.dac.gov.in."
+  },
+  {
     "scheme_name": "PM-KISAN",
-    "department": "Ministry of Agriculture",
-    "eligibility": "Small and marginal farmers owning up to 2 hectares of land",
-    "benefits": "₹6000 per year in three equal installments",
-    "process": "Register through state agriculture department or CSC"
+    "department": "Ministry of Agriculture & Farmers Welfare",
+    "eligibility": "All landholding farmer families with cultivable land. Exclusions: institutional landholders, former/current holders of constitutional posts, serving/retired government employees with pension above ₹10,000/month.",
+    "benefits": "₹6,000 per year in three equal installments of ₹2,000 each, directly transferred to bank account via DBT",
+    "process": "Register through State Agriculture Department, CSC, or pmkisan.gov.in portal. Required documents: Aadhaar, bank account, land records."
   },
   {
-    "scheme_name": "PMAY-G",
-    "department": "Ministry of Rural Development",
-    "eligibility": "Rural households without a pucca house",
-    "benefits": "Financial assistance for house construction",
-    "process": "Identification through SECC and Gram Sabha approval"
+    "scheme_name": "Cooperative Election Guidelines",
+    "department": "Ministry of Cooperation / State Cooperative Departments",
+    "eligibility": "All registered cooperative societies due for board elections",
+    "benefits": "Democratic governance of cooperatives, transparent election process, reservation provisions for SC/ST/OBC and women members",
+    "process": "Elections conducted by State Cooperative Election Authority. Nominations filed as per bye-laws. Voting by secret ballot. Results declared within 48 hours."
   },
   {
-    "scheme_name": "MGNREGA",
-    "department": "Ministry of Rural Development",
-    "eligibility": "Adult members of rural households willing to do unskilled work",
-    "benefits": "100 days of guaranteed wage employment per year",
-    "process": "Register at Gram Panchayat"
+    "scheme_name": "NCCT Training Programs",
+    "department": "National Council for Cooperative Training (NCCT)",
+    "eligibility": "Employees, managers, board members of cooperative societies. Also open to cooperative members seeking knowledge enhancement.",
+    "benefits": "Professional training in cooperative management, financial literacy, governance, legal compliance. Training conducted at VAMNICOM (Pune), 5 RICMs, and 14 ICMs across India.",
+    "process": "Apply through your cooperative society or directly to nearest RICM/ICM. Training calendar published on ncct.gov.in. Some programs available online."
+  },
+  {
+    "scheme_name": "Cooperative Credit Structure (Short-Term)",
+    "department": "NABARD / Ministry of Cooperation",
+    "eligibility": "Farmers and rural entrepreneurs who are members of PACS",
+    "benefits": "Short-term crop loans at subsidized interest rates (currently 7% p.a. with 3% interest subvention for timely repayment = effective 4% p.a.). KCC (Kisan Credit Card) through PACS.",
+    "process": "1. Become member of local PACS. 2. Apply for KCC/crop loan. 3. PACS forwards to DCCB/State Cooperative Bank. 4. Loan sanctioned and disbursed through PACS."
+  },
+  {
+    "scheme_name": "WBCIS - Weather Based Crop Insurance Scheme",
+    "department": "Ministry of Agriculture & Farmers Welfare",
+    "eligibility": "Farmers in notified areas growing notified crops. Available as alternative to PMFBY in select areas.",
+    "benefits": "Insurance coverage based on weather parameters (rainfall, temperature, humidity). Faster claim settlement as no individual crop cutting experiments needed.",
+    "process": "Similar to PMFBY. Apply through banks, CSC, or insurance companies during crop notification window."
+  },
+  {
+    "scheme_name": "National Cooperative Development Corporation (NCDC) Loans",
+    "department": "NCDC / Ministry of Cooperation",
+    "eligibility": "State-level cooperative federations, district unions, primary cooperatives engaged in processing, marketing, storage, or other approved activities",
+    "benefits": "Term loans and working capital at concessional rates for cooperative development projects. Covers sugar, textiles, dairy, fishery, handloom, coir, and other sectors.",
+    "process": "Apply through State Cooperative Department to NCDC. Project proposal with feasibility report required. NCDC sanctions and monitors implementation."
   }
 ]

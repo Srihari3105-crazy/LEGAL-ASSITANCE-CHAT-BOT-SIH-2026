@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-NyayaSetu is currently in its first public release line. Only the most recent
+SahkarSetu is currently in its first public release line. Only the most recent
 1.x release line receives security updates.
 
 | Version | Supported          |
@@ -16,7 +16,7 @@ If you are running a fork or a pre-1.0 build, please upgrade before reporting.
 
 **Do not open a public GitHub issue for security problems.**
 
-Please email **security@nyayasetu.example** with:
+Please email **security@SahkarSetu.example** with:
 
 - A clear description of the vulnerability and its impact.
 - Reproduction steps or a proof-of-concept (no live exploitation against
@@ -24,7 +24,7 @@ Please email **security@nyayasetu.example** with:
 - The commit SHA / Docker image tag you tested against.
 - Your suggested CVSS severity, if you have one.
 
-> TODO: replace `security@nyayasetu.example` with the project's real
+> TODO: replace `security@SahkarSetu.example` with the project's real
 > security contact once the domain is provisioned. Until then, you may also
 > contact the maintainers directly via the GitHub repo.
 
@@ -57,7 +57,7 @@ In-scope:
 - The FastAPI backend in `src/api/` and its routes.
 - The auth + session layer (JWT, bcrypt, rate limiting).
 - The RAG / generation pipeline (`src/core/`, `src/generation/`).
-- The voice engine (`src/modules/nyayavaani/`).
+- The voice engine (`src/modules/SahkarVaani/`).
 - The frontend in `desktop/src/` (XSS, auth handling, token leakage).
 - Default deployment configuration (Dockerfile, docker-compose,
   HF Spaces / Vercel templates).

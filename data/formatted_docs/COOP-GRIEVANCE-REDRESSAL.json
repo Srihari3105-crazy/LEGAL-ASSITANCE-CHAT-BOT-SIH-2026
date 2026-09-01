@@ -1,0 +1,33 @@
+{
+  "document_id": "COOP-GRIEVANCE-REDRESSAL",
+  "title": "Cooperative Grievance Redressal Mechanisms",
+  "department": "Ministry of Cooperation",
+  "document_type": "grievance_process",
+  "language": "en",
+  "chunks": [
+    {
+      "chunk_id": "GRIEVANCE-OVERVIEW",
+      "section": "Grievance Redressal Framework",
+      "content": "Cooperative members have multiple channels for grievance redressal: (1) Internal: Raise issue at PACS/Society General Body Meeting, (2) Board Level: Written complaint to Board of Directors, (3) Registrar: File complaint with Registrar of Cooperative Societies (state/central), (4) Cooperative Ombudsman: For multi-state cooperatives under MSCS Amendment Act 2023, (5) NCDC: For federations and apex cooperatives, (6) Banking Ombudsman: For issues with cooperative banks (RBI regulated), (7) Court: Civil court for disputes not resolved through cooperative channels. All cooperatives must maintain a Grievance Register and respond within 30 days.",
+      "category": "grievance_process"
+    },
+    {
+      "chunk_id": "GRIEVANCE-MEMBER-RIGHTS",
+      "section": "Member Rights in Cooperative Disputes",
+      "content": "Key rights of cooperative members: (1) Right to attend and vote at general meetings, (2) Right to inspect books of accounts and annual reports, (3) Right to receive dividend/bonus as per bye-laws, (4) Right to contest elections, (5) Right to file complaint against mismanagement, (6) Right to requisition special general meeting (if 1/5th members request), (7) Right to appeal against expulsion, (8) Right to participate in audit process, (9) Right to receive copy of bye-laws, (10) Right to access information about society's affairs. If any right is denied, member can approach Registrar of Cooperative Societies.",
+      "category": "legal_provision"
+    },
+    {
+      "chunk_id": "GRIEVANCE-FILING-PROCESS",
+      "section": "How to File a Cooperative Grievance",
+      "content": "Step-by-step grievance filing: (1) Document the complaint with dates, names, and evidence, (2) First submit written complaint to Secretary/Manager of the cooperative, (3) If no response in 15 days, escalate to Board of Directors, (4) If Board doesn't resolve in 30 days, file complaint with Assistant/Deputy Registrar of Cooperative Societies, (5) For financial disputes with cooperative banks, file with Banking Ombudsman (RBI), (6) For multi-state cooperatives, file with Central Registrar, (7) Keep copies of all communications, (8) For corruption/fraud, file FIR at local police station and report to Anti-Corruption Bureau. Common grievance categories: membership denial, dividend non-payment, election irregularity, loan recovery harassment, service denial, audit objection, by-law violation, corruption.",
+      "category": "grievance_process"
+    },
+    {
+      "chunk_id": "GRIEVANCE-ELECTION-DISPUTES",
+      "section": "Cooperative Election Disputes",
+      "content": "Election-related grievances in cooperatives: (1) Nomination rejection: appeal to Cooperative Election Authority within 7 days, (2) Irregularity during voting: report to Election Officer immediately, (3) Challenge election results: file petition before Cooperative Tribunal/Registrar within 30 days of result declaration, (4) Bogus membership for election: report to Registrar for membership verification, (5) Intimidation/bribery: file FIR and report to Election Authority. Under MSCS Amendment Act 2023, Cooperative Election Authority conducts and supervises elections to ensure free and fair process. All elections must follow reservation norms for SC/ST/OBC and women.",
+      "category": "grievance_process"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 """
-NyayaSetu FastAPI Application
+SahkarSetu FastAPI Application
 
-Production-grade REST API for rural Indian governance services.
+Production-grade REST API for cooperative governance & legal assistance services.
+Multilingual chatbot for cooperative members, farmers, and rural stakeholders.
 """
 
 import os
@@ -16,7 +17,7 @@ from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from .errors import (
-    NyayaSetuAPIError, nyayasetu_error_handler,
+    SahkarSetuAPIError, sahkarsetu_error_handler,
     validation_error_handler, general_exception_handler,
     http_exception_handler,
 )
@@ -35,7 +36,8 @@ from .scheme_routes import router as scheme_router
 from .grievance_routes import router as grievance_router
 from .notice_routes import router as notice_router
 from .admin_routes import router as admin_router
-from src.modules.nyayavaani.router import router as nyayavaani_router
+from .cooperative_routes import router as cooperative_router
+from src.modules.sahkarvaani.router import router as sahkarvaani_router
 
 # Configure logging
 logging.basicConfig(
@@ -53,7 +55,7 @@ logger = logging.getLogger(__name__)
 async def lifespan(app: FastAPI):
     """Application lifespan manager."""
     logger.info("=" * 80)
-    logger.info("NyayaSetu API - Starting up...")
+    logger.info("SahkarSetu API - Starting up...")
     logger.info("=" * 80)
 
     try:
@@ -89,7 +91,7 @@ async def lifespan(app: FastAPI):
         app.state.request_count = 0
         app.state.requests_by_endpoint = {}
 
-        logger.info("NyayaSetu API is ready! Visit /docs for documentation")
+        logger.info("SahkarSetu API is ready! Visit /docs for documentation")
         logger.info("=" * 80)
     except Exception as e:
         logger.error(f"Failed to initialize services: {e}")
@@ -97,7 +99,7 @@ async def lifespan(app: FastAPI):
 
     yield
 
-    logger.info("NyayaSetu API - Shutting down...")
+    logger.info("SahkarSetu API - Shutting down...")
     try:
         stop_sla_scheduler()
     except Exception as exc:
@@ -119,17 +121,19 @@ _redoc_url = None if _IS_PROD else "/redoc"
 _openapi_url = None if _IS_PROD else "/openapi.json"
 
 app = FastAPI(
-    title="NyayaSetu API",
+    title="SahkarSetu API",
     description=(
-        "# NyayaSetu Governance Platform API\n\n"
-        "Production-grade REST API for rural Indian governance services.\n\n"
+        "# SahkarSetu — Cooperative Governance & Legal Assistance Platform API\n\n"
+        "AI-powered multilingual chatbot for cooperative governance, legal provisions,\n"
+        "schemes, and member services. Built for Ministry of Cooperation / NCCT.\n\n"
         "## Features\n"
-        "- **RAG Q&A**: Ask questions about government schemes\n"
-        "- **Scheme Summarizer**: Get structured summaries\n"
-        "- **Notice Drafter**: Generate official notices\n"
-        "- **NyayaVaani**: Voice-native cross-lingual governance\n"
-        "- **Grievance Router**: Route citizen complaints\n"
-        "- **Admin Upload**: Upload new schemes\n"
+        "- **RAG Q&A**: Cooperative laws, by-laws, MSCS Act guidance\n"
+        "- **Scheme Browser**: Ministry of Cooperation schemes & PMFBY\n"
+        "- **Financial Literacy**: Cooperative banking & credit guidance\n"
+        "- **SahkarVaani**: Voice-native multilingual assistance (12 languages)\n"
+        "- **Cooperative Grievance**: Redressal with SLA tracking\n"
+        "- **PACS Services**: Primary Agricultural Credit Societies info\n"
+        "- **Notice Drafter**: Generate cooperative circulars\n"
     ),
     version="1.0.0",
     lifespan=lifespan,
@@ -139,11 +143,13 @@ app = FastAPI(
     openapi_tags=[
         {"name": "Health", "description": "Health checks and monitoring"},
         {"name": "Authentication", "description": "User authentication"},
-        {"name": "RAG Q&A", "description": "Question answering using RAG"},
-        {"name": "Scheme Summarizer", "description": "Scheme summarization"},
-        {"name": "Notice Drafter", "description": "Notice generation"},
-        {"name": "NyayaVaani", "description": "Voice-native cross-lingual governance"},
-        {"name": "Grievances", "description": "Grievance management"},
+        {"name": "RAG Q&A", "description": "Cooperative law & scheme Q&A using RAG"},
+        {"name": "Scheme Summarizer", "description": "Cooperative scheme summarization"},
+        {"name": "Notice Drafter", "description": "Cooperative circular & notice generation"},
+        {"name": "SahkarVaani", "description": "Voice-native multilingual cooperative assistance"},
+        {"name": "Grievances", "description": "Cooperative grievance redressal"},
+        {"name": "PACS Services", "description": "Primary Agricultural Credit Societies"},
+        {"name": "Financial Literacy", "description": "Cooperative financial education"},
         {"name": "Statistics", "description": "API usage statistics"},
         {"name": "Admin", "description": "Admin operations"},
     ],
@@ -195,7 +201,7 @@ app.add_middleware(RateLimitMiddleware, default_limit=100, window_seconds=60)
 # ERROR HANDLERS
 # ============================================================================
 
-app.add_exception_handler(NyayaSetuAPIError, nyayasetu_error_handler)
+app.add_exception_handler(SahkarSetuAPIError, sahkarsetu_error_handler)
 app.add_exception_handler(RequestValidationError, validation_error_handler)
 # Catch raw HTTPException (FastAPI + Starlette flavors) so str(e) leaks
 # from `raise HTTPException(500, str(e))` patterns are handled uniformly.
@@ -214,7 +220,8 @@ app.include_router(scheme_router)
 app.include_router(grievance_router)
 app.include_router(notice_router)
 app.include_router(admin_router)
-app.include_router(nyayavaani_router)
+app.include_router(cooperative_router)
+app.include_router(sahkarvaani_router)
 
 
 # ============================================================================

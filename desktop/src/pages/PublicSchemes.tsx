@@ -219,7 +219,7 @@ const PublicSchemes: React.FC = () => {
             <Link to="/privacy" className="hover:text-[#77CDFF] transition-colors">Privacy</Link>
             <Link to="/terms" className="hover:text-[#77CDFF] transition-colors">Terms</Link>
             <Link to="/login" className="hover:text-[#77CDFF] transition-colors">Login</Link>
-            <span className="ml-auto">NyayaSetu &middot; पायलट परिनियोजन</span>
+            <span className="ml-auto">SahkarSetu &middot; पायलट परिनियोजन</span>
           </footer>
         </motion.div>
       </div>

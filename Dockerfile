@@ -1,5 +1,5 @@
 # =============================================================================
-# NyayaSetu Backend - Production Dockerfile (multi-stage)
+# SahkarSetu Backend - Production Dockerfile (multi-stage)
 #
 # Targets:
 #   - Hugging Face Spaces (Docker SDK, app_port=7860, persistent FS)

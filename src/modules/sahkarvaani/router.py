@@ -1,5 +1,5 @@
 """
-NyayaVaani FastAPI Router — All voice/cross-lingual endpoints.
+SahkarVaani FastAPI Router — All voice/cross-lingual endpoints.
 """
 
 import logging
@@ -15,20 +15,20 @@ from .models import (
     TTSRequest, IntentClassifyRequest,
     VoiceGrievanceSubmitRequest,
     TranscriptionResponse, TTSResponse,
-    IntentResponse, VoiceGrievanceResponse, NyayaVaaniStatusResponse,
+    IntentResponse, VoiceGrievanceResponse, SahkarVaaniStatusResponse,
 )
 from .audio_utils import save_upload_audio
 from .language_registry import SUPPORTED_LANGUAGES
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api/v1/nyayavaani", tags=["NyayaVaani"])
+router = APIRouter(prefix="/api/v1/SahkarVaani", tags=["SahkarVaani"])
 
 
 def _get_service():
-    """Get NyayaVaani service from app state."""
-    from src.api.dependencies import get_nyayavaani_service
-    return get_nyayavaani_service()
+    """Get SahkarVaani service from app state."""
+    from src.api.dependencies import get_SahkarVaani_service
+    return get_SahkarVaani_service()
 
 
 def _get_current_user():
@@ -114,12 +114,12 @@ def _audio_file_acl(filename: str) -> Optional[dict]:
 # STATUS
 # ============================================================================
 
-@router.get("/status", response_model=NyayaVaaniStatusResponse)
-async def nyayavaani_status():
-    """NyayaVaani service health and capabilities."""
+@router.get("/status", response_model=SahkarVaaniStatusResponse)
+async def SahkarVaani_status():
+    """SahkarVaani service health and capabilities."""
     service = _get_service()
     status = await service.get_status()
-    return NyayaVaaniStatusResponse(**status)
+    return SahkarVaaniStatusResponse(**status)
 
 
 # ============================================================================
@@ -183,7 +183,7 @@ async def synthesize_speech(
             scope="private",
         )
         return TTSResponse(
-            audio_url=f"/api/v1/nyayavaani/audio/{filename}",
+            audio_url=f"/api/v1/SahkarVaani/audio/{filename}",
             duration_seconds=result.duration_seconds,
             language=result.language,
             method=result.method,
@@ -327,7 +327,7 @@ async def submit_voice_grievance(
                     owner_id=current_user.get("id") if current_user else None,
                     scope="private",
                 )
-                ack_audio_url = f"/api/v1/nyayavaani/audio/{tts_result.audio_path.name}"
+                ack_audio_url = f"/api/v1/SahkarVaani/audio/{tts_result.audio_path.name}"
         except Exception as e:
             logger.warning(f"Acknowledgement generation failed: {e}")
 
@@ -486,7 +486,7 @@ async def get_notice_audio(notice_id: str, language: str = "hi"):
 
 
 @router.get("/schemes")
-async def list_nyayavaani_schemes():
+async def list_SahkarVaani_schemes():
     """Return all active schemes with IDs, names, departments, and short descriptions."""
     from src.api.database import get_db
 
@@ -544,7 +544,7 @@ async def list_nyayavaani_schemes():
         return {"schemes": schemes, "count": len(schemes)}
 
     except Exception as e:
-        logger.error(f"List NyayaVaani schemes failed: {e}", exc_info=True)
+        logger.error(f"List SahkarVaani schemes failed: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Failed to fetch schemes")
 
 

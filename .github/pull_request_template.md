@@ -1,5 +1,5 @@
 <!--
-Thanks for contributing to NyayaSetu! Please fill out the sections below.
+Thanks for contributing to SahkarSetu! Please fill out the sections below.
 For security-sensitive changes, see SECURITY.md before opening this PR.
 -->
 

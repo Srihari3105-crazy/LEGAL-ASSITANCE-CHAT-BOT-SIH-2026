@@ -1,7 +1,7 @@
-# NyayaSetu - Project Intelligence
+# SahkarSetu - Project Intelligence
 
 ## Project Overview
-NyayaSetu (न्यायसेतु) is an AI-powered citizen governance platform for India. Electron desktop app (React 18 + TypeScript + Vite) backed by a Python FastAPI backend with RAG pipeline, voice interface, and enterprise auth. The UI ships in English and Hindi; the voice pipeline (ASR / TTS / translation) supports 12 Indian languages via Sarvam AI.
+SahkarSetu (न्यायसेतु) is an AI-powered citizen governance platform for India. Electron desktop app (React 18 + TypeScript + Vite) backed by a Python FastAPI backend with RAG pipeline, voice interface, and enterprise auth. The UI ships in English and Hindi; the voice pipeline (ASR / TTS / translation) supports 12 Indian languages via Sarvam AI.
 
 ## Tech Stack
 - **Backend**: Python, FastAPI, Uvicorn (port 8001)
@@ -18,7 +18,7 @@ NyayaSetu (न्यायसेतु) is an AI-powered citizen governance plat
 - `src/api/` — FastAPI routes, middleware, auth, database, migrations
 - `src/core/` — RAG pipeline (embedder, rag_engine, document_processor)
 - `src/generation/` — LLM client, answer generator, prompt templates
-- `src/modules/` — Summarizer, grievance router, notice drafter, NyayaVaani voice
+- `src/modules/` — Summarizer, grievance router, notice drafter, SahkarVaani voice
 - `desktop/src/` — React frontend (pages, components, contexts, services)
 - `data/` — SQLite DB, FAISS index, audio cache
 - `models/` — Cached sentence-transformer model

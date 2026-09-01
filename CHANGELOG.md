@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to NyayaSetu are documented in this file.
+All notable changes to SahkarSetu are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -69,12 +69,12 @@ run as a public, multi-user pilot.
 
 ### Added
 - FastAPI backend with 80+ endpoints across 7 routers (auth, core, schemes,
-  grievances, notices, admin, NyayaVaani voice).
+  grievances, notices, admin, SahkarVaani voice).
 - React 18 + TypeScript + Vite + Electron frontend with 10 role-adaptive pages.
 - RAG pipeline: 768-dim multilingual embeddings (`paraphrase-multilingual-
   mpnet-base-v2`), FAISS IndexFlatIP, Groq llama-3.3-70b primary with Ollama
   Qwen 2.5 14B fallback. Six-layer anti-hallucination system.
-- NyayaVaani voice engine: ASR / TTS / translation / intent across 12 Indian
+- SahkarVaani voice engine: ASR / TTS / translation / intent across 12 Indian
   languages. Sarvam AI online + faster-whisper / pyttsx3 / Ollama offline.
 - Grievance lifecycle: AI routing, priority logic, SLA tracking with
   pause/resume, citizen ratings.

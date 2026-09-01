@@ -1,15 +1,15 @@
 """
 Grievance Router Module
 
-Production-grade router for citizen grievances with department taxonomy
+Production-grade router for cooperative member grievances with department taxonomy
 classification, priority assignment, and resolution time estimation.
 
-This module routes citizen complaints to the appropriate government department
+This module routes cooperative member complaints to the appropriate department
 using RAG-based context retrieval and LLM classification. It assigns priority
 levels based on urgency indicators and estimates resolution times based on
 complaint categories.
 
-Author: NyayaSetu Team
+Author: SahkarSetu Team
 Version: 1.0.0
 """
 
@@ -36,30 +36,36 @@ except ImportError:
 Language = Literal["en", "hi"]
 
 Department = Literal[
-    "agriculture",           # Agriculture & Farmers Welfare
-    "rural_development",     # Rural Development
-    "urban_development",     # Housing & Urban Affairs
-    "social_welfare",        # Social Justice & Empowerment
-    "health",               # Health & Family Welfare
-    "education",            # Education
-    "finance",              # Finance/Banking
-    "law_enforcement",      # Police/Justice
-    "infrastructure",       # Roads/Transport
-    "employment"            # Labour & Employment
+    "cooperative_governance",   # Cooperative governance & elections
+    "pacs_services",            # PACS operations & services
+    "credit_disputes",          # Loan & credit related issues
+    "insurance_claims",         # PMFBY & crop insurance
+    "membership_issues",        # Membership, shares, dividends
+    "audit_compliance",         # Audit objections & compliance
+    "agriculture",              # Agriculture & Farmers Welfare
+    "rural_development",        # Rural Development
+    "social_welfare",           # Social Justice & Empowerment
+    "finance",                  # Finance/Banking
+    "training_education"        # NCCT training & cooperative education
 ]
 
 Priority = Literal["low", "medium", "high", "critical"]
 
 Category = Literal[
-    "scheme_eligibility",    # Questions about qualifying for schemes
-    "payment_delay",         # Benefit payment not received
-    "application_rejected",  # Application denial
-    "documentation",         # Missing/incorrect documents
-    "corruption",           # Bribery/corruption complaint
-    "service_denial",       # Service not provided
-    "quality_complaint",    # Poor service quality
-    "information_request",  # General information query
-    "other"                 # Uncategorized
+    "membership_denial",         # Membership application rejected
+    "dividend_dispute",          # Dividend/surplus not received
+    "election_irregularity",     # Election process issues
+    "audit_objection",           # Audit findings dispute
+    "loan_recovery_harassment",  # Unfair loan recovery
+    "service_denial",            # PACS service not provided
+    "corruption",                # Bribery/corruption complaint
+    "by_law_violation",          # Bye-law non-compliance
+    "insurance_claim_delay",     # PMFBY claim not settled
+    "payment_delay",             # Benefit payment not received
+    "scheme_eligibility",        # Eligibility questions
+    "documentation",             # Missing/incorrect documents
+    "information_request",       # General information query
+    "other"                      # Uncategorized
 ]
 
 logger = logging.getLogger(__name__)

@@ -1,5 +1,5 @@
 """
-NyayaVaani startup — health checks, model verification, background cleanup.
+SahkarVaani startup — health checks, model verification, background cleanup.
 """
 
 import asyncio
@@ -10,7 +10,7 @@ from typing import Optional
 
 import httpx
 
-from .config import NyayaVaaniConfig
+from .config import SahkarVaaniConfig
 from .asr_engine import ASREngine
 from .tts_engine import TTSEngine
 from .cross_lingual_engine import CrossLingualEngine
@@ -80,11 +80,11 @@ def _cleanup_output_long(directory: Path, max_age_hours: int) -> int:
     return deleted
 
 
-class NyayaVaaniService:
-    """Top-level service that owns all NyayaVaani engines."""
+class SahkarVaaniService:
+    """Top-level service that owns all SahkarVaani engines."""
 
-    def __init__(self, config: Optional[NyayaVaaniConfig] = None):
-        self.config = config or NyayaVaaniConfig()
+    def __init__(self, config: Optional[SahkarVaaniConfig] = None):
+        self.config = config or SahkarVaaniConfig()
         self.asr: Optional[ASREngine] = None
         self.tts: Optional[TTSEngine] = None
         self.cross_lingual: Optional[CrossLingualEngine] = None
@@ -96,7 +96,7 @@ class NyayaVaaniService:
 
     async def initialize(self) -> None:
         """Initialize all engines and run health checks."""
-        logger.info("Initializing NyayaVaani service...")
+        logger.info("Initializing SahkarVaani service...")
         self.config.validate()
 
         # Initialize engines
@@ -118,7 +118,7 @@ class NyayaVaaniService:
         # Start background cleanup
         self._cleanup_task = asyncio.create_task(self._periodic_cleanup())
 
-        logger.info("NyayaVaani service initialized successfully")
+        logger.info("SahkarVaani service initialized successfully")
 
     async def shutdown(self) -> None:
         """Cleanup on shutdown."""
@@ -130,7 +130,7 @@ class NyayaVaaniService:
                 pass
         cleanup_old_audio(self.config.audio_upload_dir, max_age_hours=0)
         cleanup_old_audio(self.config.audio_output_dir, max_age_hours=0)
-        logger.info("NyayaVaani service shut down")
+        logger.info("SahkarVaani service shut down")
 
     async def get_status(self) -> dict:
         """Get service status."""

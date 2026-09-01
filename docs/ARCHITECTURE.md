@@ -1,6 +1,6 @@
-# NyayaSetu Architecture
+# SahkarSetu Architecture
 
-This document describes how NyayaSetu is wired in production. For local
+This document describes how SahkarSetu is wired in production. For local
 development setup see [README.md](../README.md). For deployment steps see
 [DEPLOYMENT.md](../DEPLOYMENT.md). For day-2 operations see
 [RUNBOOK.md](RUNBOOK.md).
@@ -117,7 +117,7 @@ Multi-stage validation (length / source / number / JSON repair)
 Answer + citations + confidence
 ```
 
-Voice (`src/modules/nyayavaani/`) plugs into the same layer for the
+Voice (`src/modules/SahkarVaani/`) plugs into the same layer for the
 voice grievance flow:
 
 ```
@@ -164,7 +164,7 @@ Security extras: 5 failed logins ⇒ 15 min lockout; password history
 
 ### 6. Role hierarchy
 
-NyayaSetu uses three numeric roles. Higher numbers can do everything a
+SahkarSetu uses three numeric roles. Higher numbers can do everything a
 lower number can.
 
 | Role     | Level | Can do |

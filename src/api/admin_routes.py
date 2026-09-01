@@ -400,7 +400,7 @@ async def system_health(current_user: dict = Depends(require_role("admin"))):
             health["status"] = "degraded"
 
         # DB file size
-        db_path = os.environ.get("NYAYASETU_DB_PATH", "data/governance.db")
+        db_path = os.environ.get("SahkarSetu_DB_PATH", "data/governance.db")
         if os.path.exists(db_path):
             db_size = os.path.getsize(db_path)
             health["components"]["storage"] = {

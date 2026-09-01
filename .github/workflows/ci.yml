@@ -26,16 +26,16 @@ jobs:
         env:
           POSTGRES_USER: nyaya
           POSTGRES_PASSWORD: nyaya
-          POSTGRES_DB: nyayasetu_ci
+          POSTGRES_DB: SahkarSetu_ci
         ports:
           - 5432:5432
         options: >-
-          --health-cmd "pg_isready -U nyaya -d nyayasetu_ci"
+          --health-cmd "pg_isready -U nyaya -d SahkarSetu_ci"
           --health-interval 5s
           --health-timeout 3s
           --health-retries 10
     env:
-      DATABASE_URL: postgresql://nyaya:nyaya@localhost:5432/nyayasetu_ci
+      DATABASE_URL: postgresql://nyaya:nyaya@localhost:5432/SahkarSetu_ci
       JWT_SECRET_KEY: ci-only-not-a-real-secret
       ENV: test
     steps:
@@ -126,6 +126,6 @@ jobs:
           file: Dockerfile
           push: false
           load: false
-          tags: nyayasetu-backend:ci
+          tags: SahkarSetu-backend:ci
           cache-from: type=gha
           cache-to: type=gha,mode=max

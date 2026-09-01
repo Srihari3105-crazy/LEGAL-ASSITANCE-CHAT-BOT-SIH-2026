@@ -30,7 +30,7 @@ assignees: ''
 
 ## Environment
 
-- NyayaSetu version / commit SHA:
+- SahkarSetu version / commit SHA:
 - Deployment: [ ] localhost [ ] HF Spaces [ ] Vercel [ ] other (specify)
 - OS:
 - Python version (backend):

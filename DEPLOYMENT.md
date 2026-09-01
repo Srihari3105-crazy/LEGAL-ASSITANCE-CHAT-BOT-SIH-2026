@@ -1,4 +1,4 @@
-# NyayaSetu Deployment Guide
+# SahkarSetu Deployment Guide
 
 Step-by-step path from a clean checkout to a live, multi-user, $0/month
 public deployment. The target audience is a small village pilot.
@@ -70,7 +70,7 @@ git push
 ### 1.0 Create project
 
 1. Go to <https://console.neon.tech> and create a project named
-   `nyayasetu`.
+   `SahkarSetu`.
 2. Pick a region geographically close to your HF Space (HF runs in
    `us-east-1` by default; pick **AWS US East**).
 3. From the project dashboard, click **Connection Details** and copy the
@@ -125,7 +125,7 @@ page.
 1. Go to <https://huggingface.co/new-space>.
 2. Fill out:
    - **Owner**: your username or org.
-   - **Space name**: `nyayasetu` (or whatever you like).
+   - **Space name**: `SahkarSetu` (or whatever you like).
    - **License**: Apache 2.0.
    - **SDK**: **Docker** ▸ **Blank**.
    - **Hardware**: CPU basic (free).
@@ -137,7 +137,7 @@ The simplest path is to push your repo's contents to the Space's git
 remote. From your laptop:
 
 ```bash
-git remote add hf https://huggingface.co/spaces/<your-username>/nyayasetu
+git remote add hf https://huggingface.co/spaces/<your-username>/SahkarSetu
 # HF will prompt for an HF token (Settings ▸ Access Tokens, "write" scope)
 git push hf main
 ```
@@ -186,7 +186,7 @@ the first time (model download); subsequent rebuilds are warm.
 Once the Space shows "Running":
 
 ```bash
-curl https://<your-username>-nyayasetu.hf.space/health
+curl https://<your-username>-SahkarSetu.hf.space/health
 ```
 
 You should get a 200.
@@ -206,13 +206,13 @@ You should get a 200.
 
    | Key | Value |
    | --- | --- |
-   | `VITE_API_URL` | `https://<your-username>-nyayasetu.hf.space` |
+   | `VITE_API_URL` | `https://<your-username>-SahkarSetu.hf.space` |
    | `VITE_TURNSTILE_SITE_KEY` | (filled in Phase 5; placeholder for now) |
 
 4. Click **Deploy**.
 
 The build takes ~30–60 s. Note your Vercel URL, e.g.
-`https://nyayasetu.vercel.app`.
+`https://SahkarSetu.vercel.app`.
 
 ---
 
@@ -222,7 +222,7 @@ Go back to the Space ▸ Settings ▸ Variables and secrets and update
 `CORS_ORIGINS` to the actual Vercel URL (no trailing slash):
 
 ```
-https://nyayasetu.vercel.app
+https://SahkarSetu.vercel.app
 ```
 
 The Space rebuilds. Once it's back up, your Vercel SPA can talk to your
@@ -249,8 +249,8 @@ The login page now requires Turnstile.
 ## Phase 6 — Smoke test (5 min)
 
 ```bash
-export API_URL='https://<your-username>-nyayasetu.hf.space'
-export FRONTEND_URL='https://nyayasetu.vercel.app'
+export API_URL='https://<your-username>-SahkarSetu.hf.space'
+export FRONTEND_URL='https://SahkarSetu.vercel.app'
 python scripts/smoke_test.py
 ```
 
@@ -332,7 +332,7 @@ Both must return 200. The pages should describe:
 
 ### "Voice / transcribe endpoint 500s"
 - Browser-side: confirm the user granted mic permission.
-- Server-side: check Sarvam API key validity; `/api/v1/nyayavaani/health`
+- Server-side: check Sarvam API key validity; `/api/v1/SahkarVaani/health`
   reports the offline-vs-online state.
 
 ### "Feature X worked locally but not in production"

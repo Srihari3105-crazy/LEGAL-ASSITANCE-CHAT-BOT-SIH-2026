@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 # Mode detection
 # --------------------------------------------------------------------------
 _DATABASE_URL = os.environ.get("DATABASE_URL", "").strip()
-_SQLITE_PATH = os.environ.get("NYAYASETU_DB_PATH", "data/governance.db")
+_SQLITE_PATH = os.environ.get("SahkarSetu_DB_PATH", "data/governance.db")
 
 
 def _is_postgres_url(url: str) -> bool:

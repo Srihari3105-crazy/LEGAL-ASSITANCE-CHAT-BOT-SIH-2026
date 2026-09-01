@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 
-// NyayaSetu earthy palette as RGB strings
+// SahkarSetu earthy palette as RGB strings
 const COLORS = [
   '194, 123, 58',   // Mitti (clay brown)
   '245, 158, 11',   // Haldi (turmeric gold)

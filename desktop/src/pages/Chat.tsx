@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Send, Bot, User, Loader2, Sparkles } from 'lucide-react';
 import apiService from '../services/api';
 import PageTransition from '../components/ui/PageTransition';
-import VoiceInputButton from '../components/nyayavaani/VoiceInputButton';
+import VoiceInputButton from '../components/SahkarVaani/VoiceInputButton';
 import AIDisclaimerBanner from '../components/ui/AIDisclaimerBanner';
 
 interface Message {
@@ -20,7 +20,7 @@ const Chat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1', role: 'assistant',
-      content: 'Hello! I\'m your NyayaSetu assistant. Ask me anything about government schemes like PM-KISAN, MGNREGA, or PMAY-G. I can help you understand eligibility, benefits, and application processes.',
+      content: 'Hello! I\'m your SahkarSetu assistant. Ask me anything about government schemes like PM-KISAN, MGNREGA, or PMAY-G. I can help you understand eligibility, benefits, and application processes.',
       timestamp: new Date(),
     }
   ]);
